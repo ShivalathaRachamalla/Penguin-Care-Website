@@ -3,6 +3,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from "./components/auth/login.component";
+import SignUp from "./components/auth/signup.component";
 
 import Home from './components/Home.component';
 
@@ -31,6 +32,7 @@ function App() {
           <Switch>
             <Route exact path='/' component={Home} />
             <Route path="/Login" component={Login} />
+            <Route path="/sign-up" component={SignUp} />
           </Switch>
         </div>
       </div>
