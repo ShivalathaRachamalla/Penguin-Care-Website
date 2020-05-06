@@ -8,6 +8,7 @@ class Indoor extends Component {
                     <h4 className="card-title">Creative Activities to Keep Your Kids Entertained at Home :</h4>
                     
                    <div className="para">
+                   <div className="trial">
                    <img src={require('../img/activityani.gif')} alt="activity d
                     image"  class="activity_img"/>
                    <p>
@@ -18,10 +19,12 @@ class Indoor extends Component {
                    at home, whether you're stocked up  on crafting supplies or not.
                     </p>
                     </div>
+                    </div>
                   
                     <div className="para">
                     
                         <ol type="1">
+                            <div className="trial">
                         <font size="5" color="brown"> <li><b>Make homemade Playdough</b></li></font>
                             
                             <p>Any time we make homemade playdough, it’s a hit! 
@@ -37,7 +40,8 @@ class Indoor extends Component {
                                 <p className="para">Be careful not to overcook it, or the dough will be crumbly. You can use playdough tools, or simply let them play with the dough as is.</p>
                                 <img src={require('../img/playdough.jpg')} alt="activity d
                              image" width="500" height="350" align="center" />
-                                
+                                </div>
+                                <div className="trial">
                                 <font size="5" color="brown">  <li><b>Make Fort</b></li></font> 
                                
                                <p>Building indoor forts is a timeless pastime that is still a popular activity for kids today. Here’s a list of the basic supplies you need to get started as well as our top tips for how to 
@@ -51,21 +55,24 @@ class Indoor extends Component {
                                </ul>
                                <img src={require('../img/fort.jpg')} alt="activity d
                                 image" width="600" height="350" align="center" />
-                              
+                              </div>
+                              <div className="trial">
                               <font size="5" color="brown"> <li> <b>Jumping frog origami activity</b></li></font>
                                <p> This is a great activity for school aged kids: 
                                  <a href="https://www.youtube.com/watch?v=oi7oitREUBQ"> Origami jumping frogs </a>from It’s Always Autumn. Click through for step by step folding instructions, then let kids make as many frogs as they like. They actually jump, 
                                    so they’re pretty fun to play with once you’ve folded a bunch.</p>
                                    <img src={require('../img/jumpingfrog.gif')} alt="activity d
                              image" width="500" height="250" align="center" />
-                                  
+                                  </div>
+                                  <div className="trial">
                                   <font size="5" color="brown"> <li> <b>Rock Painting Activity</b></li></font>
                                 <p>With all the beautiful rock art floating around, we wanted to make sure that the littlest crafters don’t get left out.  Some of the story rocks and intricate paintings are too much for kids to craft.  
                                  So we decided to search for some fun crafts that 
                                  are perfect the smallest rock hunters.  Grab some paints, a handful of rocks, and your little ones and let’s start stone painting!</p>
                                  <img src={require('../img/rock_collection.jpg')} alt="activity d
                                 image" width="600" height="350" align="center" />
-                                 
+                                 </div>
+                                 <div className="trial">
                                  <font size="5" color="brown"> <li> <b>Fingerprint Art</b></li></font>
                              <p>My little kids have a new favorite activity: fingerprint art. They have spent hours in the past few weeks making finger and thumb prints and 
                                  then adding details with a black Sharpie to turn the prints into all sorts of animals, monsters, bugs, etc. It’s a fantastic boredom buster: it keeps them busy and quiet without
@@ -84,6 +91,8 @@ class Indoor extends Component {
                                  these to paint simple structured images.</p>
                                  <img src={require('../img/balloonart.jpg')} alt="activity d
                              image" width="400" height="250" align="center" />
+                             </div>
+                             <div className="trial">
                              <font size="5" color="brown"> <li> <b> Paper Plate Sun Craft</b></li></font>
                              <p>
                              Here comes the sun! This fun and simple paper plate craft will definitely work on those 
@@ -100,6 +109,8 @@ class Indoor extends Component {
                             </ul>
                             <img src={require('../img/sun.jpg')} alt="activity d
                              image" width="500" height="300" align="center" />
+                             </div>
+                             <div className="trial">
                             <font size="5" color="brown"> <li> <b>Caterpillar Suncatcher Craft</b></li></font>
                             <p>This caterpillar suncatcher offers toddlers a fun indoor activity. Using the colorful tops of extra Play-Doh lids, you can help guide 
                              your little one as he sticks them to the window, forming a happy little caterpillar. Then show him where to glue on the 
@@ -115,6 +126,8 @@ class Indoor extends Component {
                              </ul>
                              <img src={require('../img/Caterpillar.jpg')} alt="activity d
                              image" width="500" height="300" align="center" />
+                             </div>
+                             <div className="trial">
                               <font size="5" color="brown"> <li> <b>Puzzles</b></li></font>
                               <p>Exercise those creative, cognitive and problem-solving muscles with a good puzzle. You can use a 
                                   store-bought variety or have the kids make their own. Have your children draw a picture on a sturdy 
@@ -122,10 +135,13 @@ class Indoor extends Component {
                                   Cut out the pieces with a good pair of scissors, mix them up and get solving. Indoor games and craft in one fun activity!</p>
                                   <img src={require('../img/puzzle.gif')} alt="activity d
                              image" width="500" height="300" align="center" />
+                             </div>
                             </ol>
                             <br/>
+                            <div className="trial">
                             <img src={require('../img/indactivity.png')} alt="activity d
-                             image" width="500" height="500" align="center" /><br/>
+                             image" width="400" height="500" align="center" /><br/></div>
+                             <div className="trial">
                              <font color="red"><h2 align="center">STAY AT HOME</h2></font>
                              <p className="para">Above all, we hope that staying at home will save lives. Indeed, we hope, that staying at home, 
                                  will save the enormous work and limitless efforts of all the people around the world who fight daily 
@@ -135,6 +151,7 @@ class Indoor extends Component {
                                   Stay sane, happy and healthy!
 
                                   Happy Playing!</p>
+                                 </div>
                     </div>
                      
                 </div>
