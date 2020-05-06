@@ -6,6 +6,7 @@ import Login from "./components/auth/login.component";
 import SignUp from "./components/auth/signup.component";
 
 import Home from './home/Home.component';
+import Indoor from './components/Indoor';
 
 function App() {
   return (<Router>
@@ -15,6 +16,9 @@ function App() {
           <Link className="navbar-brand" to={"/"}><img className="logo" src={require("./assets/images/finallogo.png")} alt="logo"/></Link>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav ml-auto">
+            <li className="nav-item">
+                <Link className="nav-link" to={"/Indoor"}>Indoor Activity</Link>
+              </li>
               <li className="nav-item">
                 <Link className="nav-link" to={"/Login"}>Login</Link>
               </li>
@@ -33,6 +37,7 @@ function App() {
             <Route exact path='/' component={Home} />
             <Route path="/Login" component={Login} />
             <Route path="/sign-up" component={SignUp} />
+            <Route Path="/Indoor Activity" component={Indoor}/>
           </Switch>
         </div>
       </div>
