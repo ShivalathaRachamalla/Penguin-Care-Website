@@ -40,6 +40,7 @@ animation-duration: 8s;
 .para{
   margin:20px;
   padding-left:15px;
+  display:auto;
 }
 .activity_img {
 display: flex;
