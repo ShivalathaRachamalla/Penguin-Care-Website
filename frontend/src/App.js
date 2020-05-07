@@ -9,6 +9,7 @@ import Home from './home/Home.component';
 import Indoor from './components/Indoor';
 import Recipe from './food/Recipe';
 import PostPage from './components/posts/PostPage';
+import Movies from './components/Movies'; 
 
 function App() {
   return (<Router>
@@ -17,11 +18,17 @@ function App() {
         <div className="container">
           <Link className="navbar-brand" to={"/"}><img className="logo" src={require("./assets/images/finallogo.png")} alt="logo"/></Link>
           <ul className="navbar-nav ml-auto">
+         
           <li className="nav-item">
                 <Link className="nav-link" to={"/Indoor"}>Indoor Activities</Link>
               </li>
               <li className="nav-item">
+
               <Link className="nav-link" to={"/Recipe"}>Recipes</Link>
+                 </li>
+                 <li className="nav-item">
+                <Link className="nav-link" to={"/Movies"}>Movies for kids</Link>
+
               </li>
               </ul>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
@@ -47,8 +54,12 @@ function App() {
             <Route path="/Login" component={Login} />
             <Route path="/sign-up" component={SignUp} />
             <Route path="/Indoor" component={Indoor}/>
+
             <Route path="/Recipe" component={Recipe}/>
             <Route exact path="/posts" component={PostPage}/>
+
+            <Route path="/Movies" component={Movies} />
+
           </Switch>
         </div>
       </div>

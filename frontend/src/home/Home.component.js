@@ -17,10 +17,9 @@ class Home extends Component{
                 <a href=" https://www.unicef.org/stories/novel-coronavirus-outbreak-what-parents-should-know"> 
                 Everything you need to know about washing your hands to protect against coronavirus (COVID-19) 
                 </a>
-
                 </div>
-
-</div>
+                
+        </div>
                 
         );
     }
