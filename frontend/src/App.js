@@ -7,6 +7,7 @@ import SignUp from "./components/auth/signup.component";
 
 import Home from './home/Home.component';
 import Indoor from './components/Indoor';
+import Recipe from './food/Recipe';
 import PostPage from './components/posts/PostPage';
 
 function App() {
@@ -18,6 +19,9 @@ function App() {
           <ul className="navbar-nav ml-auto">
           <li className="nav-item">
                 <Link className="nav-link" to={"/Indoor"}>Indoor Activities</Link>
+              </li>
+              <li className="nav-item">
+              <Link className="nav-link" to={"/Recipe"}>Recipes</Link>
               </li>
               </ul>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
@@ -43,6 +47,7 @@ function App() {
             <Route path="/Login" component={Login} />
             <Route path="/sign-up" component={SignUp} />
             <Route path="/Indoor" component={Indoor}/>
+            <Route path="/Recipe" component={Recipe}/>
             <Route exact path="/posts" component={PostPage}/>
           </Switch>
         </div>
