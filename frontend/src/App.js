@@ -2,8 +2,8 @@ import React from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Login from "./components/auth/login.component";
-import SignUp from "./components/auth/signup.component";
+import LoginPage from "./components/auth/LoginPage.js";
+import SignupPage from "./components/auth/SignupPage.js";
 
 import Home from './home/Home.component';
 import Indoor from './components/Indoor';
@@ -38,8 +38,8 @@ function App() {
         <div className="auth-inner">
           <Switch>
             <Route exact path='/' component={Home} />
-            <Route path="/Login" component={Login} />
-            <Route path="/sign-up" component={SignUp} />
+            <Route path="/Login" component={LoginPage} />
+            <Route path="/sign-up" component={SignupPage} />
             <Route Path="/Indoor Activities" component={Indoor}/>
           </Switch>
         </div>
