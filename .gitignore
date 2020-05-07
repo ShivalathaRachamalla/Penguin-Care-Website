@@ -14,12 +14,14 @@ build/
 .springBeans
 .sts4-cache
 .DS_Store
+
 ### IntelliJ IDEA ###
 .idea
 *.iws
 *.iml
 *.ipr
 out/
+bin
 
 ### NetBeans ###
 /nbproject/private/
