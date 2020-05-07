@@ -7,6 +7,7 @@ import SignUp from "./components/auth/signup.component";
 
 import Home from './home/Home.component';
 import Indoor from './components/Indoor';
+import PostPage from './components/posts/PostPage';
 
 function App() {
   return (<Router>
@@ -21,14 +22,15 @@ function App() {
               </ul>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav ml-auto">
-            
+              <li className="nav-item">
+                <Link className="nav-link" to={"/posts"}>Posts</Link>
+              </li>
               <li className="nav-item">
                 <Link className="nav-link" to={"/Login"}>Login</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to={"/sign-up"}>Sign up</Link>
               </li>
-
             </ul>
           </div>
         </div>
@@ -40,7 +42,8 @@ function App() {
             <Route exact path='/' component={Home} />
             <Route path="/Login" component={Login} />
             <Route path="/sign-up" component={SignUp} />
-            <Route Path="/Indoor Activities" component={Indoor}/>
+            <Route path="/Indoor" component={Indoor}/>
+            <Route exact path="/posts" component={PostPage}/>
           </Switch>
         </div>
       </div>
