@@ -1,24 +1,24 @@
 import React, { Component } from "react";
 import LoginForm from "./LoginForm";
 import Auth from "../../services/Auth";
+import PostPage from "../posts/PostPage.js";
 
 class LoginPage extends Component {
-    async login(loginData) {
+
+     
+   login = async (loginData) => {
         const loginSuccess = await Auth.login(loginData);
 
-
-        if(loginSuccess){
-            // redirect to posts page
-
+        if(loginSuccess) {
+          this.props.history.push('/posts')
+        } else {
+          alert("Invalid credentials");
         }
-
-        if (!loginSuccess) {
-            alert("Invalid credentials");
-        }
-    }
+    } 
 
 
     render() {
+
         return (
             <div className="wrapper">
                 <div className="container">
@@ -28,13 +28,9 @@ class LoginPage extends Component {
 
                         </div>
 
-                        <div className="col-md-6">
                             <div className="row">
-                                <div className="col-12  strong-shadow">
                                     <LoginForm onSubmit={this.login} />
-                                </div>
                             </div>
-                        </div>
                     </div>
                 </div>
             </div>

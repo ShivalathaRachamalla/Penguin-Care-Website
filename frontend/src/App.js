@@ -57,7 +57,6 @@ function App() {
 
             <Route path="/Recipe" component={Recipe}/>
             <Route exact path="/posts" component={PostPage}/>
-
             <Route path="/Movies" component={Movies} />
 
           </Switch>
