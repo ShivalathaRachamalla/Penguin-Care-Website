@@ -7,7 +7,7 @@ class Indoor extends Component {
                 <div className="card-body">
                     <h4 className="card-title">Creative Activities to Keep Your Kids Entertained at Home :</h4>
                     
-                   <div className="para">
+                  
                    <div className="trial">
                    <img src={require('../img/activityani.gif')} alt="activity d
                     image"  class="activity_img"/>
@@ -18,10 +18,10 @@ class Indoor extends Component {
                    weeks a little easier on parents, we came up with a list of easy, kid-friendly activities that will keep their minds occupied 
                    at home, whether you're stocked up  on crafting supplies or not.
                     </p>
-                    </div>
+                   
                     </div>
                   
-                    <div className="para">
+                   
                     
                         <ol type="1">
                             <div className="trial">
@@ -152,7 +152,7 @@ class Indoor extends Component {
 
                                   Happy Playing!</p>
                                  </div>
-                    </div>
+                   
                      
                 </div>
                 
