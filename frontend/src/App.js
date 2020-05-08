@@ -10,13 +10,14 @@ import Indoor from './components/Indoor';
 import Recipe from './food/Recipe';
 import PostPage from './components/posts/PostPage';
 import Movies from './components/Movies'; 
+import Exercise from './activity/Exercise';
 
 function App() {
   return (<Router>
     <div className="App">
       <nav className="navbar navbar-expand-lg navbar-light fixed-top">
         <div className="container">
-          <Link className="navbar-brand" to={"/"}><img className="logo" src={require("./assets/images/finallogo.png")} alt="logo"/></Link>
+          <Link className="navbar-brand" to={"/"}><img className="logo" src={require("./assets/images/penlogo.png")} alt="logo"/></Link>
           <ul className="navbar-nav ml-auto">
          
           <li className="nav-item">
@@ -25,6 +26,10 @@ function App() {
               <li className="nav-item">
 
               <Link className="nav-link" to={"/Recipe"}>Recipes</Link>
+                 </li>
+
+                 <li className="nav-item">
+                 <Link className="nav-link" to={"/Exercise"}>Exercise</Link>
                  </li>
                  <li className="nav-item">
                 <Link className="nav-link" to={"/Movies"}>Movies for kids</Link>
@@ -56,6 +61,7 @@ function App() {
             <Route path="/Indoor" component={Indoor}/>
 
             <Route path="/Recipe" component={Recipe}/>
+            <Route path="/Exercise" component={Exercise}/>
             <Route exact path="/posts" component={PostPage}/>
 
             <Route path="/Movies" component={Movies} />
