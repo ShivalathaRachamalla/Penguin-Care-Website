@@ -22,6 +22,7 @@ class Auth {
     logout() {
         this.setLoggedIn(false);
         this._clearToken();
+        return false;
     }
 
     bindLoggedInStateSetter(loggedInStateSetter) {

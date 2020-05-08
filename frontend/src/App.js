@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, Component } from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
@@ -10,8 +10,15 @@ import Indoor from './components/Indoor';
 import Recipe from './food/Recipe';
 import PostPage from './components/posts/PostPage';
 import Movies from './components/Movies'; 
+import Auth from "./services/Auth";
 
-function App() {
+function  App() {
+
+  const [isLoggedIn, setLoggedIn] = useState(Auth.isLoggedIn());
+  Auth.bindLoggedInStateSetter(setLoggedIn);
+
+
+
   return (<Router>
     <div className="App">
       <nav className="navbar navbar-expand-lg navbar-light fixed-top">
@@ -36,9 +43,12 @@ function App() {
               <li className="nav-item">
                 <Link className="nav-link" to={"/posts"}>Posts</Link>
               </li>
-              <li className="nav-item">
+             {isLoggedIn? 
+             
+             <li className="nav-item"><Link className="nav-link" onClick={()=> Auth.logout()}>Logout</Link></li>
+             : <li className="nav-item">
                 <Link className="nav-link" to={"/Login"}>Login</Link>
-              </li>
+              </li>}
               <li className="nav-item">
                 <Link className="nav-link" to={"/sign-up"}>Sign up</Link>
               </li>
@@ -56,7 +66,7 @@ function App() {
             <Route path="/Indoor" component={Indoor}/>
 
             <Route path="/Recipe" component={Recipe}/>
-            <Route exact path="/posts" component={PostPage}/>
+            {isLoggedIn ? <Route exact path="/posts" component={PostPage}/> : <p>Please login for Posts</p>}
             <Route path="/Movies" component={Movies} />
 
           </Switch>
@@ -65,5 +75,6 @@ function App() {
     </div></Router>
   );
 }
+
 
 export default App;
