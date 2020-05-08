@@ -20,7 +20,6 @@ public class PostService {
     }
 
     public Optional<Post> getByID(Long id) {
-        // @TODO get a post by ID if it exists
         return null;
     }
 
@@ -29,7 +28,6 @@ public class PostService {
     }
 
     public Optional<Post> update(Post post) {
-        // @TODO update the post if it exists in DB and return the updated post.
         return null;
     }
 

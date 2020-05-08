@@ -1,48 +1,48 @@
-package se.kth.sda7.wdgroupproject.posts;
+package se.kth.sda7.wdgroupproject.comments;
 
-import se.kth.sda7.wdgroupproject.comments.Comment;
+import se.kth.sda7.wdgroupproject.posts.Post;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "post")
-
-public class Post {
+@Table(name = "comment")
+public class Comment{
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     @Column(name = "body")
     private String body;
 
-//    @OneToMany(mappedBy = "post", cascade = CascadeType.ALL)
-//    private List<Comment> comments = new ArrayList<>();
+    @ManyToOne
+    private Post post;
 
-    public Post() {
+    public Comment() {
     }
 
-    public Post(String body) {
+    public Comment(Long id, String body, Post post) {
+        this.id = id;
         this.body = body;
+        this.post = post;
     }
 
     public Long getId() {
         return id;
     }
-
     public void setId(Long id) {
         this.id = id;
     }
-
     public String getBody() {
         return body;
     }
-
     public void setBody(String body) {
         this.body = body;
     }
-
-    public void addComment(Comment comment) {
+    public Post getPost() {
+        return post;
+    }
+    public void setPost(Post post) {
+        this.post = post;
     }
 }
 

@@ -16,7 +16,7 @@ function  App() {
 
   const [isLoggedIn, setLoggedIn] = useState(Auth.isLoggedIn());
   Auth.bindLoggedInStateSetter(setLoggedIn);
-
+ console.log()
 
 
   return (<Router>
@@ -64,10 +64,10 @@ function  App() {
             <Route path="/Login" component={LoginPage} />
             <Route path="/sign-up" component={SignupPage} />
             <Route path="/Indoor" component={Indoor}/>
+            <Route path="/Movies" component={Movies} />
 
             <Route path="/Recipe" component={Recipe}/>
             {isLoggedIn ? <Route exact path="/posts" component={PostPage}/> : <p>Please Login first</p>}
-            <Route path="/Movies" component={Movies} />
 
           </Switch>
         </div>

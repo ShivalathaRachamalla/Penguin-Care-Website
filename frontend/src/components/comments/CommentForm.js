@@ -1,20 +1,20 @@
-import React from "react";
+import React, { Component } from 'react';
 
-function PostForm({onSubmit}) {
+import CommentList from './CommentList';
+
+function CommentForm({onSubmit}) {
     const [body, setBody] = React.useState("");
 
     const handleSubmit = () => {
         // Invoke the passed in event callback
         onSubmit({body: body});
 
-        // Clear the input field
         setBody("");
     };
 
-    return (
-        <div className="card">
-            <div className="card-body">
-                <h3 className="font-weight-bold indigo-text py-2" >Post what you know about Corona situation and help parents?</h3>
+    return(
+            <div>
+                <p className="font-weight-bold indigo-text py-2" >Write comments below</p>
                 <div>
                     <div className="form-group">
                         <textarea 
@@ -28,13 +28,15 @@ function PostForm({onSubmit}) {
                         <button 
                             className="btn btn-primary btn-sm" 
                             onClick={handleSubmit}>
-                            Post
+                            Comment
                         </button>
                     </div>
                 </div>
             </div>
-        </div>
-    );
+        
+
+        
+    )
 }
 
-export default PostForm;
+export default CommentForm;
