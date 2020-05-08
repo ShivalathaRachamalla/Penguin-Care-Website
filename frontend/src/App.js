@@ -66,7 +66,7 @@ function  App() {
             <Route path="/Indoor" component={Indoor}/>
 
             <Route path="/Recipe" component={Recipe}/>
-            {isLoggedIn ? <Route exact path="/posts" component={PostPage}/> : <p>Please login for Posts</p>}
+            {isLoggedIn ? <Route exact path="/posts" component={PostPage}/> : <p>Please Login first</p>}
             <Route path="/Movies" component={Movies} />
 
           </Switch>
