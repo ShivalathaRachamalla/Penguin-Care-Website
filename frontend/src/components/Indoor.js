@@ -21,9 +21,7 @@ class Indoor extends Component {
                    
                     </div>
                   
-                   
-                    
-                        <ol type="1">
+                     <ol type="1">
                             <div className="trial">
                         <font size="5" color="brown"> <li><b>Make homemade Playdough</b></li></font>
                             
@@ -80,12 +78,16 @@ class Indoor extends Component {
                                   And as long as we have wipes handy for them to clean up with, it doesn’t even make a mess.</p>
                                   <img src={require('../img/finger_art.jpg')} alt="activity d
                              image" width="600" height="350" align="center" />
+                             </div>
+                             <div className="trial">
                             <font size="5" color="brown"> <li> <b>Create a Race-Car Track</b></li></font>
                              <p>Use your painter’s tape (or opt for this super cool race-track tape) to make a huge road system for your kids’
                                   matchbox cars. Think outside the box and have the track scale furniture and other obstacles (just make sure it’s something 
                                   you don’t mind toy vehicles being “driven” over). The key to making it active is to make it large-scale, so they are engaging their core muscles while crawling all over.</p>
                                   <img src={require('../img/car_tape.jpg')} alt="activity d
                              image" width="550" height="350" align="center" />
+                             </div>
+                             <div className="trial">
                              <font size="5" color="brown"> <li> <b> Paint with a Balloon</b></li></font>
                              <p>Make cricket-ball sized water balloons and use them as tools to paint on blank paper. Young kids can simply make stamps in different colours. Older kids could use 
                                  these to paint simple structured images.</p>
