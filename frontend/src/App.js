@@ -11,6 +11,7 @@ import Recipe from './food/Recipe';
 import PostPage from './components/posts/PostPage';
 import Movies from './components/Movies'; 
 import Exercise from './activity/Exercise';
+import Outdooractivity from './Outdoor/Outdooractivity';
 
 function App() {
   return (<Router>
@@ -24,6 +25,10 @@ function App() {
                 <Link className="nav-link" to={"/Indoor"}>Indoor Activities</Link>
               </li>
               <li className="nav-item">
+                <Link className="nav-link" to={"/Outdoor"}>Outdoor Activities</Link>
+              </li>
+              <li className="nav-item">
+
 
               <Link className="nav-link" to={"/Recipe"}>Recipes</Link>
                  </li>
@@ -59,6 +64,7 @@ function App() {
             <Route path="/Login" component={Login} />
             <Route path="/sign-up" component={SignUp} />
             <Route path="/Indoor" component={Indoor}/>
+            <Route path="/Outdoor" component={Outdooractivity}/>
 
             <Route path="/Recipe" component={Recipe}/>
             <Route path="/Exercise" component={Exercise}/>
