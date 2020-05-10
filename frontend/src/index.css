@@ -45,6 +45,7 @@ body, html, .App, #root, .auth-wrapper {
 }
 
 .auth-link {
+  height: 300px;
   width: 300px;
   margin: 0 auto;
   float: left;
