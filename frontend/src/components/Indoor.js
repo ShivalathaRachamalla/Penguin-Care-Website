@@ -3,9 +3,9 @@ import '../App.css';
 class Indoor extends Component {
     render() {
         return (
-            <div className="card">
+            <div className="wrapper">
                 <div className="card-body">
-                    <h4 className="card-title">Creative Activities to Keep Your Kids Entertained at Home :</h4>
+                    <h2 align="center">Creative Activities to Keep Your Kids Entertained at Home :</h2>
                     
                   
                    <div className="trial">
