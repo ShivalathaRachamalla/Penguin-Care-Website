@@ -49,9 +49,9 @@ function  App() {
              : <li className="nav-item">
                 <Link className="nav-link" to={"/Login"}>Login</Link>
               </li>}
-              <li className="nav-item">
+              {!isLoggedIn ? <li className="nav-item">
                 <Link className="nav-link" to={"/sign-up"}>Sign up</Link>
-              </li>
+              </li> : null}
             </ul>
           </div>
         </div>
@@ -62,7 +62,7 @@ function  App() {
           <Switch>
             <Route exact path='/' component={Home} />
             <Route path="/Login" component={LoginPage} />
-            <Route path="/sign-up" component={SignupPage} />
+            <Route path="/sign-up" component={SignupPage} /> 
             <Route path="/Indoor" component={Indoor}/>
             <Route path="/Movies" component={Movies} />
 

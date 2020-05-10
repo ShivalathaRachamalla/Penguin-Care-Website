@@ -4,10 +4,13 @@ import Auth from "../../services/Auth";
 
 class SignupPage extends Component {
 
-    async register(registrationData) {
+     register = async (registrationData)  => {
         const registerSuccess = await Auth.register(registrationData);
         if (!registerSuccess) {
             alert("Couldn't register check credentials and try again");
+        }else {
+            this.props.history.push('/posts');
+
         }
     }
 

@@ -27,8 +27,11 @@ public class PostService {
         return repository.save(post);
     }
 
-    public Optional<Post> update(Post post) {
-        return null;
+    public Post update(Long id,Post updatedPost) throws Exception {
+        return repository.findById(id).map(post -> {
+            post.setBody(post.getBody());
+            return repository.save(updatedPost);
+        }).orElseThrow(() -> new Exception("Post not found"));
     }
 
     public void deleteById(Long id) {

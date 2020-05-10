@@ -28,5 +28,10 @@ public class PostController {
         return postService.getAll();
     }
 
+    @PutMapping("/{id}")
+    public Post update(@PathVariable Long id, @RequestBody Post updatedPost) throws Exception {
+        return postService.update(id, updatedPost);
+    }
+
 }
 
