@@ -1,25 +1,21 @@
 import React, { Component } from "react";
+import LoginForm from "./LoginForm";
+import Auth from "../../services/Auth";
 
-export default class Login extends Component {
+export default class Login extends Component
+{
+    async login(loginData) {
+        const loginSuccess = await Auth.login(loginData);
+        if (!loginSuccess) {
+            alert("Invalid credentials");
+        }
+    }
     render() {
-        return (
-            <form>
-                <h3>Sign In</h3>
+        return(
+            <div>
+                <LoginForm onSubmit={this.login}/>
+            </div>
+            );
 
-                <div className="form-group">
-                    <label>Email address</label>
-                    <input type="email" className="form-control" placeholder="Enter email" />
-                </div>
-
-                <div className="form-group">
-                    <label>Password</label>
-                    <input type="password" className="form-control" placeholder="Enter password" />
-                </div>
-
-
-                <button type="submit" className="btn btn-primary btn-block">Submit</button>
-                
-            </form>
-        );
     }
 }
