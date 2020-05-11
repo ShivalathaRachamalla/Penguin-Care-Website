@@ -19,7 +19,7 @@ function LoginForm({onSubmit}) {
                         <input type="password" className="form-control" value={password} onChange={e => setPassword(e.target.value)} placeholder="Enter password" />
                     </div>
 
-                    <button type="submit" className="btn btn-primary btn-block" onClick={e => onSubmit({email, password})} >Submit</button>
+                    <button type="button" className="btn btn-primary btn-block" onClick={e => onSubmit({email, password})} >Submit</button>
 
                 </form>
         );
