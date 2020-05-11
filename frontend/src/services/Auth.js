@@ -12,13 +12,22 @@ class Auth {
     }
 
     async login(loginData) {
-        return await this._loginOrRegister(AuthApi.authenticate, loginData);
+
+       let result_login = await this._loginOrRegister(AuthApi.authenticate, loginData);
+        if (result_login)
+        {
+        alert("You successfully logged-in into Penguine care");
+        }
+        return result_login;
     }
 
     async register(registrationData) {
-        let result = await this._loginOrRegister(AuthApi.register, registrationData);
+        let result_register = await this._loginOrRegister(AuthApi.register, registrationData);
+        if (result_register)
+        {
         alert("You successfully signed-in into Penguine care");
-        return result;
+        }
+        return result_register;
     }
 
     logout() {
