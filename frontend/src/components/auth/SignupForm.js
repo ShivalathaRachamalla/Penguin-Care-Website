@@ -6,6 +6,8 @@ function SingnupForm({onSubmit}) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
+
+
     return (
        <form>
             <h3>Sign Up</h3>

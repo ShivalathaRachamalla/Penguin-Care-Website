@@ -16,7 +16,9 @@ class Auth {
     }
 
     async register(registrationData) {
-        return await this._loginOrRegister(AuthApi.register, registrationData);
+        let result = await this._loginOrRegister(AuthApi.register, registrationData);
+        alert("You successfully signed-in into Penguine care");
+        return result;
     }
 
     logout() {
