@@ -3,8 +3,8 @@ import '../App.css';
 class Movies extends Component {
     render() {
         return (
-            <div className="card">
-               <h4 className="card-title">Films for quarantined kids of all ages that will keep the whole family entertained</h4>
+            <div className="wrapper">
+               <h2 align="center">Films for quarantined kids of all ages that will keep the whole family entertained</h2>
                <div className="trial">
                    <img src={require('../img/familtytv.jpg')} alt="activity d
                     image"  class="activity_img" />

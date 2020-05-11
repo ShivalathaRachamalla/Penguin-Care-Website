@@ -11,27 +11,37 @@ import Recipe from './food/Recipe';
 import PostPage from './components/posts/PostPage';
 import Movies from './components/Movies'; 
 import Auth from "./services/Auth";
+import Exercise from './activity/Exercise';
+import Outdooractivity from './Outdoor/Outdooractivity';
 
 function  App() {
 
   const [isLoggedIn, setLoggedIn] = useState(Auth.isLoggedIn());
   Auth.bindLoggedInStateSetter(setLoggedIn);
- console.log()
+
 
 
   return (<Router>
     <div className="App">
       <nav className="navbar navbar-expand-lg navbar-light fixed-top">
         <div className="container">
-          <Link className="navbar-brand" to={"/"}><img className="logo" src={require("./assets/images/finallogo.png")} alt="logo"/></Link>
+          <Link className="navbar-brand" to={"/"}><img className="logo" src={require("./assets/images/penlogo.png")} alt="logo"/></Link>
           <ul className="navbar-nav ml-auto">
          
           <li className="nav-item">
                 <Link className="nav-link" to={"/Indoor"}>Indoor Activities</Link>
               </li>
               <li className="nav-item">
+                <Link className="nav-link" to={"/Outdoor"}>Outdoor Activities</Link>
+              </li>
+              <li className="nav-item">
+
 
               <Link className="nav-link" to={"/Recipe"}>Recipes</Link>
+                 </li>
+
+                 <li className="nav-item">
+                 <Link className="nav-link" to={"/Exercise"}>Exercise</Link>
                  </li>
                  <li className="nav-item">
                 <Link className="nav-link" to={"/Movies"}>Movies for kids</Link>
@@ -64,10 +74,16 @@ function  App() {
             <Route path="/Login" component={LoginPage} />
             <Route path="/sign-up" component={SignupPage} /> 
             <Route path="/Indoor" component={Indoor}/>
+
             <Route path="/Movies" component={Movies} />
 
             <Route path="/Recipe" component={Recipe}/>
+            <Route path="/Exercise" component={Exercise}/>
+            <Route path="/Outdoor" component={Outdooractivity}/>
+
+
             {isLoggedIn ? <Route exact path="/posts" component={PostPage}/> : <p>Please Login first</p>}
+
 
           </Switch>
         </div>
