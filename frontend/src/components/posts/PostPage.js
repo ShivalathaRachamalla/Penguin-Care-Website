@@ -68,7 +68,7 @@ class PostsPage extends React.Component {
 
                 {posts.map(post => 
                     <PostCard key={post.id} post={post} onDeleteClick={() => this.deletePost(post)}
-                    onUpdateClick = {(postData) => this.updatePost(postData)}
+                    handleEdit = {(postData) => this.updatePost(postData)} 
                     />
                 )}
             </div>
