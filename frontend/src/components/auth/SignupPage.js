@@ -16,15 +16,9 @@ class SignupPage extends Component {
 
     render() {
         return (
-            <div className="wrapper">
-                <div className="container">
-                    <div className="row mt-4">
-                        <div className="col-md-6 " style={{color: "white"}}>
-                        </div>
+                        <div>
                             <SignupForm onSubmit={this.register}/>
                     </div>
-                </div>
-            </div>
         );
     }
 }

@@ -1,34 +1,22 @@
 import React, { Component } from "react";
+import SignupForm from "./SignupForm";
+import Auth from "../../services/Auth";
 
 export default class SignUp extends Component {
+
+    async register(registrationData) {
+        const registerSuccess = await Auth.register(registrationData);
+        if (!registerSuccess) {
+            alert("Couldn't register check credentials and try again");
+        }
+    }
+
     render() {
-        return (
-            <form>
-                <h3>Sign Up</h3>
+        return(
+            <div>
+                <SignupForm onSubmit={this.register}/>
+            </div>
+            );
 
-                <div className="form-group">
-                    <label>First name</label>
-                    <input type="text" className="form-control" placeholder="First name" />
-                </div>
-
-                <div className="form-group">
-                    <label>Last name</label>
-                    <input type="text" className="form-control" placeholder="Last name" />
-                </div>
-
-                <div className="form-group">
-                    <label>Email address</label>
-                    <input type="email" className="form-control" placeholder="Enter email" />
-                </div>
-
-                <div className="form-group">
-                    <label>Password</label>
-                    <input type="password" className="form-control" placeholder="Enter password" />
-                </div>
-
-                <button type="submit" className="btn btn-primary btn-block">Sign Up</button>
-                
-            </form>
-        );
     }
 }

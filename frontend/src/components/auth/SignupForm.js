@@ -1,66 +1,40 @@
 import React, {useState} from "react";
 
-function RegisterForm({onSubmit}) {
-    const [firstName, setFirstName] = useState("");
-    const [lastName, setLastName] = useState("");
+function SingnupForm({onSubmit}) {
+    const [firstName, setFName] = useState("");
+    const [lastName, setLName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
+
+
     return (
-        <div className="card">
-            <div className="card-body">
-                <h3>Sign up</h3>
-                <div>
-                    <div className="form-group">
-                        <label>First name</label>
-                        <input
-                            type="text"
-                            className="form-control"
-                            value={firstName}
-                            onChange={ e => setFirstName(e.target.value) }
-                            placeholder="First Name"/>
-                    </div>
+       <form>
+            <h3>Sign Up</h3>
 
-                    <div className="form-group">
-                        <label>Last name</label>
-                        <input
-                            type="text"
-                            className="form-control"
-                            value={lastName}
-                            onChange={ e => setLastName(e.target.value) }
-                            placeholder="LastName"/>
-                    </div>
-
-                    <div className="form-group">
-                        <label>Email</label>
-                        <input
-                            type="email"
-                            value={email}
-                            onChange={ e => setEmail(e.target.value) }
-                            className="form-control"
-                            placeholder="Enter Email"/>
-                    </div>
-
-                    <div className="form-group">
-                        <label>Password</label>
-                        <input
-                            type="password"
-                            placeholder="Enter Password"
-                            className="form-control"
-                            value={password}
-                            onChange={e => setPassword(e.target.value)} />
-                    </div>
-
-                        <button
-                            className="btn btn-primary btn-block"
-                            onClick={() => onSubmit({firstName, lastName, email, password})}>
-                            Create account
-                        </button>
-
-                </div>
+            <div className="form-group">
+                <label>First name</label>
+                <input type="text" className="form-control" value={firstName} onChange={e => setFName(e.target.value)} placeholder="First name" />
             </div>
-        </div>
-    );
-}
 
-export default RegisterForm;
+            <div className="form-group">
+                <label>Last name</label>
+                <input type="text" className="form-control" value={lastName} onChange= {e => setLName(e.target.value)}  placeholder="Last name" />
+            </div>
+
+            <div className="form-group">
+                <label>Email address</label>
+                <input type="email" className="form-control" value={email} onChange= {e => setEmail(e.target.value)} placeholder="Enter email" />
+            </div>
+
+            <div className="form-group">
+                <label>Password</label>
+                <input type="password" className="form-control" value={password} onChange= {e => setPassword(e.target.value)} placeholder="Enter password" />
+            </div>
+
+            <button type="button" className="btn btn-primary btn-block" onClick={e => onSubmit({firstName, lastName, email, password})} >Sign Up</button>
+
+        </form>)
+
+    }
+    export default SingnupForm;

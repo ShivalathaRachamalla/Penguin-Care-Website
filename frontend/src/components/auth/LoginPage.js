@@ -20,20 +20,9 @@ class LoginPage extends Component {
     render() {
 
         return (
-            <div className="wrapper">
-                <div className="container">
-                    <div className="row mt-4">
-                        <div className="col-md-6 " style={{color: "white"}}>
-
-
-                        </div>
-
-                            <div className="row">
-                                    <LoginForm onSubmit={this.login} />
+                        <div>
+                            <LoginForm onSubmit={this.login} />
                             </div>
-                    </div>
-                </div>
-            </div>
         );
     }
 }

@@ -1,46 +1,29 @@
-import React, {useState} from 'react';
-import Auth from "../../services/Auth";
+import React, {useState} from "react";
 
 function LoginForm({onSubmit}) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    return (
-        <div className="card">
-            <div className="card-body">
-                <h3>Sign In</h3>
-                <div>
+    {
+            return (
+                <form>
+                    <h3>Sign In</h3>
+
                     <div className="form-group">
                         <label>Email address</label>
-                        <input
-                            type="email"
-                            className="form-control"
-                            placeholder="Enter Email"
-                            value={email}
-                            onChange={e => setEmail(e.target.value)} />
+                        <input type="email" className="form-control" value={email} onChange={e => setEmail(e.target.value)} placeholder="Enter email"/>
                     </div>
 
                     <div className="form-group">
                         <label>Password</label>
-                        <input
-                            type="password"
-                            placeholder=" Enter Password"
-                            className="form-control"
-                            value={password}
-                            onChange={e => setPassword(e.target.value)} />
+                        <input type="password" className="form-control" value={password} onChange={e => setPassword(e.target.value)} placeholder="Enter password" />
                     </div>
 
-                    <div className="form-group">
-                        <button
-                            className="btn btn-primary btn-block"
-                            onClick={() => onSubmit({email, password})}>
-                            Login
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
+                    <button type="button" className="btn btn-primary btn-block" onClick={e => onSubmit({email, password})} >Submit</button>
+
+                </form>
+        );
+    }
+
 }
-
 export default LoginForm;
