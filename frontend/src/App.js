@@ -1,19 +1,26 @@
-import React from 'react';
+import React, {useState, Component } from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Login from "./components/auth/login.component";
-import SignUp from "./components/auth/signup.component";
+import LoginPage from "./components/auth/LoginPage.js";
+import SignupPage from "./components/auth/SignupPage.js";
 
 import Home from './home/Home.component';
 import Indoor from './components/Indoor';
 import Recipe from './food/Recipe';
 import PostPage from './components/posts/PostPage';
 import Movies from './components/Movies'; 
+import Auth from "./services/Auth";
 import Exercise from './activity/Exercise';
 import Outdooractivity from './Outdoor/Outdooractivity';
 
-function App() {
+function  App() {
+
+  const [isLoggedIn, setLoggedIn] = useState(Auth.isLoggedIn());
+  Auth.bindLoggedInStateSetter(setLoggedIn);
+
+
+
   return (<Router>
     <div className="App">
       <nav className="navbar navbar-expand-lg navbar-light fixed-top">
@@ -46,12 +53,15 @@ function App() {
               <li className="nav-item">
                 <Link className="nav-link" to={"/posts"}>Posts</Link>
               </li>
-              <li className="nav-item">
+             {isLoggedIn? 
+             
+             <li className="nav-item"><Link className="nav-link" onClick={()=> Auth.logout()}>Logout</Link></li>
+             : <li className="nav-item">
                 <Link className="nav-link" to={"/Login"}>Login</Link>
-              </li>
-              <li className="nav-item">
+              </li>}
+              {!isLoggedIn ? <li className="nav-item">
                 <Link className="nav-link" to={"/sign-up"}>Sign up</Link>
-              </li>
+              </li> : null}
             </ul>
           </div>
         </div>
@@ -61,16 +71,19 @@ function App() {
         <div className="auth-inner">
           <Switch>
             <Route exact path='/' component={Home} />
-            <Route path="/Login" component={Login} />
-            <Route path="/sign-up" component={SignUp} />
+            <Route path="/Login" component={LoginPage} />
+            <Route path="/sign-up" component={SignupPage} /> 
             <Route path="/Indoor" component={Indoor}/>
-            <Route path="/Outdoor" component={Outdooractivity}/>
+
+            <Route path="/Movies" component={Movies} />
 
             <Route path="/Recipe" component={Recipe}/>
             <Route path="/Exercise" component={Exercise}/>
-            <Route exact path="/posts" component={PostPage}/>
+            <Route path="/Outdoor" component={Outdooractivity}/>
 
-            <Route path="/Movies" component={Movies} />
+
+            {isLoggedIn ? <Route exact path="/posts" component={PostPage}/> : <p>Please Login first</p>}
+
 
           </Switch>
         </div>
@@ -78,5 +91,6 @@ function App() {
     </div></Router>
   );
 }
+
 
 export default App;
