@@ -13,6 +13,7 @@ import Movies from './components/Movies';
 import Auth from "./services/Auth";
 import Exercise from './activity/Exercise';
 import Outdooractivity from './Outdoor/Outdooractivity';
+import PagesBar from "./components/navbar/PagesBar";
 
 function  App() {
 
@@ -23,7 +24,7 @@ function  App() {
 
   return (<Router>
     <div className="App">
-      <nav className="navbar navbar-expand-lg navbar-light fixed-top">
+{/*       <nav className="navbar navbar-expand-lg navbar-light fixed-top">
         <div className="container">
           <Link className="navbar-brand" to={"/"}><img className="logo" src={require("./assets/images/penlogo.png")} alt="logo"/></Link>
           <ul className="navbar-nav ml-auto">
@@ -65,6 +66,32 @@ function  App() {
             </ul>
           </div>
         </div>
+      </nav> */}
+      <nav className="navbar navbar-expand-lg navbar-light fixed-top">
+        <div className="container">
+          { isLoggedIn ?
+            <Link className="navbar-brand" to={"/"}><img className="logo" src={require("./assets/images/penlogo.png")} alt="logo"/></Link>
+            :<img className="logo" src={require("./assets/images/penlogo.png")} alt="logo"/>
+          }
+         
+         {isLoggedIn ? <PagesBar/> : null }
+
+
+           <ul className="navbar-nav ml-auto">
+              {isLoggedIn ?<li className="nav-item">
+                <Link className="nav-link" to={"/posts"}>Posts</Link>
+              </li> : null}
+             {isLoggedIn? 
+             
+             <li className="nav-item"><Link className="nav-link" onClick={()=> Auth.logout()}>Logout</Link></li>
+             : <li className="nav-item">
+                <Link className="nav-link" to={"/Login"}>Login</Link>
+              </li>}
+              {!isLoggedIn ? <li className="nav-item">
+                <Link className="nav-link" to={"/sign-up"}>Sign up</Link>
+              </li> : null}
+            </ul>
+          </div>
       </nav>
 
       <div className="auth-wrapper">
@@ -74,15 +101,11 @@ function  App() {
             <Route path="/Login" component={LoginPage} />
             <Route path="/sign-up" component={SignupPage} /> 
             <Route path="/Indoor" component={Indoor}/>
-
             <Route path="/Movies" component={Movies} />
-
             <Route path="/Recipe" component={Recipe}/>
             <Route path="/Exercise" component={Exercise}/>
             <Route path="/Outdoor" component={Outdooractivity}/>
-
-
-            {isLoggedIn ? <Route exact path="/posts" component={PostPage}/> : <p>Please Login first</p>}
+            <Route exact path="/posts" component={PostPage}/> 
 
 
           </Switch>
