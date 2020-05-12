@@ -14,7 +14,7 @@ function PostForm({onSubmit}) {
     return (
         <div className="card">
             <div className="card-body">
-                <h3 className="font-weight-bold indigo-text py-2" >Post what you know about Corona situation and help parents?</h3>
+                <h3 className="font-weight-bold indigo-text py-2" >Post what do you know about Corona situation and help parents!</h3>
                 <div>
                     <div className="form-group">
                         <textarea 

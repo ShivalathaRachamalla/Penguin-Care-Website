@@ -28,12 +28,15 @@ public class PostController {
         return postService.getAll();
     }
 
-    /*
-    @PutMapping("/{id}")
+
+  /*  @PutMapping("/{id}")
     public Post update(@PathVariable Long id, @RequestBody Post updatedPost) throws Exception {
         return postService.update(id, updatedPost);
-    }
-    */
+    } */
+  @PutMapping("")
+  public Post update(@RequestBody Post updatedPost) throws Exception {
+      return postService.update(updatedPost);
+  }
 
 
 }

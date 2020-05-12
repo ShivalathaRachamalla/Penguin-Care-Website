@@ -13,8 +13,9 @@ class PostsApi {
         return Api.post('/posts', post);
     }
 
-    updatePost(id, post) {
-        return Api.put('/posts'+id, post);
+    updatePost(post) {  
+        console.log('...',post);
+        return Api.put('/posts', post);
     }
 
     deletePost(id) {
