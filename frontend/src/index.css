@@ -4,11 +4,18 @@
   box-sizing: border-box;
 }
 body {
-  background: white !important;
+ 
   min-height: auto;
   display: auto;
   font-weight: 400;
   font-family: "Times New Roman", Times, serif;
+  background: linear-gradient(to right, #3498db);
+  /* background-size: auto; */
+  background-image: url("./background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+
 }
 
 h1,h2,h3,h4,h5,h6,label,span {
@@ -22,8 +29,8 @@ body, html, .App, #root, .auth-wrapper {
 }
 
 .navbar-light {
-  background-color: rgb(211, 205, 205);
- 
+  background-color: rgb(145, 190, 241);
+  height: 70px;
 }
 
 .auth-wrapper {
@@ -31,7 +38,7 @@ body, html, .App, #root, .auth-wrapper {
   justify-content: center;
   flex-direction: column;
   text-align: left;
-  margin-top: 105px;
+  margin-top: 30px;
 }
 
 .auth-inner {
@@ -72,6 +79,7 @@ body, html, .App, #root, .auth-wrapper {
   text-align: center;
   font-weight: bold;
   font-size:250%;
+ 
 }
 
 .bottom {

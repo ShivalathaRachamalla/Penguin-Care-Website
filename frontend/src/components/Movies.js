@@ -6,8 +6,7 @@ class Movies extends Component {
             <div className="wrapper">
                <h2 align="center">Films for quarantined kids of all ages that will keep the whole family entertained</h2>
                <div className="trial">
-                   <img src={require('../img/familtytv.jpg')} alt="activity d
-                    image"  class="activity_img" />
+                   <img  src={require('../img/familypic.png')} alt="activity d image"  class="activity_img" />
                      <p>
                      With parents and kids alike stuck inside courtesy of the coronavirus, 
                      families are spending lots more together, which means sharing escapist entertainment to 
