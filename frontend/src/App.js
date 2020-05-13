@@ -24,49 +24,7 @@ function  App() {
 
   return (<Router>
     <div className="App">
-{/*       <nav className="navbar navbar-expand-lg navbar-light fixed-top">
-        <div className="container">
-          <Link className="navbar-brand" to={"/"}><img className="logo" src={require("./assets/images/penlogo.png")} alt="logo"/></Link>
-          <ul className="navbar-nav ml-auto">
-         
-          <li className="nav-item">
-                <Link className="nav-link" to={"/Indoor"}>Indoor Activities</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to={"/Outdoor"}>Outdoor Activities</Link>
-              </li>
-              <li className="nav-item">
 
-
-              <Link className="nav-link" to={"/Recipe"}>Recipes</Link>
-                 </li>
-
-                 <li className="nav-item">
-                 <Link className="nav-link" to={"/Exercise"}>Exercise</Link>
-                 </li>
-                 <li className="nav-item">
-                <Link className="nav-link" to={"/Movies"}>Movies for kids</Link>
-
-              </li>
-              </ul>
-          <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul className="navbar-nav ml-auto">
-              <li className="nav-item">
-                <Link className="nav-link" to={"/posts"}>Posts</Link>
-              </li>
-             {isLoggedIn? 
-             
-             <li className="nav-item"><Link className="nav-link" onClick={()=> Auth.logout()}>Logout</Link></li>
-             : <li className="nav-item">
-                <Link className="nav-link" to={"/Login"}>Login</Link>
-              </li>}
-              {!isLoggedIn ? <li className="nav-item">
-                <Link className="nav-link" to={"/sign-up"}>Sign up</Link>
-              </li> : null}
-            </ul>
-          </div>
-        </div>
-      </nav> */}
       <nav className="navbar navbar-expand-lg navbar-light fixed-top">
         <div className="container">
           { isLoggedIn ?
