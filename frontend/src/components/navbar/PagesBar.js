@@ -9,19 +9,19 @@ import Exercise from '../../activity/Exercise';
 import Outdooractivity from '../../Outdoor/Outdooractivity'; */
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Dropdown from '../dropdownmenu/Dropdown';
 
 
 function PagesBar(){
   return(
     <>
              <ul className="navbar-nav ml-auto">
+          <li >   
+          <div style={{display: 'flex', justifyContent: 'center'}} > 
+          <Dropdown/>
+          </div>
+          </li> 
          
-         <li className="nav-item">
-               <Link className="nav-link" to={"/Indoor"}>Indoor Activities</Link>
-             </li>
-             <li className="nav-item">
-               <Link className="nav-link" to={"/Outdoor"}>Outdoor Activities</Link>
-             </li>
              <li className="nav-item">
 
 
