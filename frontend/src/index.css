@@ -30,7 +30,7 @@ body, html, .App, #root, .auth-wrapper {
 
 .navbar-light {
   background-color: rgb(145, 190, 241);
-  height: 70px;
+  height: 110px;
 }
 
 .auth-wrapper {
@@ -38,7 +38,7 @@ body, html, .App, #root, .auth-wrapper {
   justify-content: center;
   flex-direction: column;
   text-align: left;
-  margin-top: 30px;
+  margin-top: 80px;
 }
 
 .auth-inner {

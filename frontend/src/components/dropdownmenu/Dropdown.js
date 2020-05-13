@@ -32,8 +32,9 @@ showDropdownMenu(event) {
 
   render() {
     return (
-        <div  className="dropdown" >
-         <div className="btn btn-secondary dropdown-toggle" onClick={this.showDropdownMenu}> Activities </div>
+        <div  className="dropleft" >
+          
+         <div className="btn btn-secondary dropdown-toggle dropdown-toggle-split" onClick={this.showDropdownMenu}> Activities </div>
 
           { this.state.displayMenu ? (
           <ul>
@@ -50,7 +51,7 @@ showDropdownMenu(event) {
           null
         )
         }
-
+    
        </div>
 
     );
