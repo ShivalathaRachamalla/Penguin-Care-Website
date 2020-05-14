@@ -3,50 +3,52 @@ import RecepieApi from "../api/RecepieApi";
 import AddRecepie from "./AddRecepie";
 import AddRecepieForm from "./AddRecepieForm";
 
-
 class AddRecepiePage extends React.Component {
-    constructor(props) {
-        super(props);
+  constructor(props) {
+    super(props);
 
-        this.state = {
-            recepies : []
-        };
+    this.state = {
+      recepies: [],
+    };
+  }
+
+  async postRecepie(recepieData) {
+    console.log("recepieData", recepieData);
+
+    try {
+      const response = await RecepieApi.postRecepie(recepieData);
+      console.log("response", response);
+      const recepie = response.data;
+      const newRecepies = this.state.recepies.concat(recepie);
+
+      this.setState({
+        recepies: newRecepies,
+      });
+    } catch (e) {
+      console.error(e);
     }
+  }
 
-    async postRecepie(recepieData) {
-        try {
-            const response = await RecepieApi.postRecepie(recepieData);
-            const recepie = response.data;
-            const newRecepies = this.state.recepies.concat(recepie);
+  componentDidMount() {
+    RecepieApi.getAllRecepies()
+      .then(({ data }) => this.setState({ recepies: data }))
+      .catch((err) => console.error(err));
+  }
 
-            this.setState({
-                recepies: newRecepies,
-            });
-        } catch (e) {
-            console.error(e);
-        }
-    }
+  render() {
+    const recepies = this.state.recepies;
 
-    
-    componentDidMount() {
-        RecepieApi.getAllRecepies()
-            .then(({data}) => this.setState({recepies: data}))
-            .catch(err => console.error(err));
-    }
-
-    render() {
-        const recepies = this.state.recepies;
-
-        return (
-            <div className="card">
-                <AddRecepieForm onSubmit={(recepieData) => this.postRecepie(recepieData)}/>
-                <div className="recipe">
-                {recepies.map(recepie => 
-                    <AddRecepie key={recepie.id} recepie={recepie} />
-                )} </div>
-            </div>
-        );
-    }
+    return (
+      <div className="card">
+        <AddRecepieForm onSubmit={this.postRecepie} />
+        <div className="recipe">
+          {recepies.map((recepie) => (
+            <AddRecepie key={recepie.id} recepie={recepie} />
+          ))}{" "}
+        </div>
+      </div>
+    );
+  }
 }
 
 export default AddRecepiePage;
