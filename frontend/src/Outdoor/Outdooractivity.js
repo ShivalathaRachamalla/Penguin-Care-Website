@@ -118,24 +118,7 @@ class Outdooractivity extends Component {
                             </p2>    
                         </div>          
                     </div>
-
-                
-
-                    
-
-
                     </div>
-
-
-
-
-
-
-
-
-
-    
-
         );
 
         }

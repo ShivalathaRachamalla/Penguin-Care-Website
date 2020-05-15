@@ -3,6 +3,7 @@ package se.kth.sda7.wdgroupproject.auth;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -31,6 +32,17 @@ public class AuthService {
         return null;
     }
 
+    public String getLoggedInUserName() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if (!(authentication instanceof AnonymousAuthenticationToken)) {
+            String currentUserName = authentication.getName();
+            System.out.println("currentUserName");
+            return currentUserName;
+        }
+        return null;
+    }
+
+
     public String createAuthToken(String email) {
         HashMap<String, String> claims = new HashMap<>();
         claims.put("email", email);
@@ -42,6 +54,8 @@ public class AuthService {
                 new UsernamePasswordAuthenticationToken(email, password)
         );
 
+        SecurityContextHolder.getContext().setAuthentication(authentication);
         return createAuthToken(email);
     }
+
 }

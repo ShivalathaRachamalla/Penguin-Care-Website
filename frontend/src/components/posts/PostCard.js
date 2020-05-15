@@ -40,9 +40,9 @@ function PostCard({post, onDeleteClick, onHandleEdit}) {
                 <button className="btn btn-danger btn-sm mb-4 float-right" onClick={onDeleteClick}>Delete</button>
                 
                 {
-                !edit ? <button className="btn btn-danger btn-sm mb-4 float-right" 
+                !edit ? <button className="btn btn-danger btn-sm mb-4 float-right mr-1" 
                 onClick={onUpdateClick} >Edit</button> :
-                <button className="btn btn-danger btn-sm mb-4 float-right" 
+                <button className="btn btn-danger btn-sm mb-4 float-right mr-1" 
                 onClick={handleEdit} >Save</button>
                 }
 
