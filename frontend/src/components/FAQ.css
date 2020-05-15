@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
+
+body{
+    background: #f6f6f6;
+}
+.box{
+    width:500px;
+    margin: auto;
+    background:lightskyblue;
+    border-radius: 7px;
+    box-shadow: 1px,2px,4px,rgba(0,0,0,.3);
+    padding-bottom: 5px;
+    
+}
+.heading1{
+    background: rgb(32, 112, 178);
+    border-radius:7px,7px,0px,0px;
+    padding: 10px;
+    color:#fff;
+    text-align:center;
+    font-family: Open Sans,sans-serif;
+    margin: auto;
+    
+}
+.faqs
+{
+    padding:10px 20px;
+}
+::-webkit-details-marker{
+    float: right;
+    margin-top:3px;
+}
+.try{
+    background: #f6f6f6;
+    padding: 10px;
+    border-radius: 7px;
+    margin:20px;
+
+   /* font-family: "Times New Roman", Times, serif;*/
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-family: Open Sans,sans-serif;
+}
+.try1{
+    outline: none;
+   
+    
+}
+.text
+{
+    font-family: Open Sans,sans-serif;
+    margin-top: 5px;
+}
