@@ -6,6 +6,7 @@
   height: 40vmin;
 }
 
+
 .App-header {
   background-color: gray;
   min-height: 100vh;
@@ -24,6 +25,10 @@
 .logo {
   width: 100px;
   height: 60px;
+}
+.usericon
+{
+width: 34px;
 }
 
 .card-title{
@@ -79,4 +84,8 @@ border-color:white ;
  /*border-radius: 15px;
   transition: all .3s;*/
   
+}
+.postdown
+{
+padding-top:65px
 }
