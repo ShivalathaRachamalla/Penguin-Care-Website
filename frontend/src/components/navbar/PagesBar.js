@@ -35,6 +35,11 @@ function PagesBar(){
                <Link className="nav-link" to={"/Movies"}>Movies for kids</Link>
 
              </li>
+             <li className="nav-item">
+               <Link className="nav-link" to={"/FAQ"}>FAQ</Link></li>
+            
+              <li className="nav-item">
+               <Link className="nav-link" to={"/AboutUs"}>AboutUs</Link></li>
              </ul>
     </>
   );
