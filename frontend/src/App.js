@@ -14,7 +14,7 @@ import Auth from "./services/Auth";
 import Exercise from './activity/Exercise';
 import Outdooractivity from './Outdoor/Outdooractivity';
 import PagesBar from "./components/navbar/PagesBar";
-
+import FAQ from './components/FAQ';
 
 function  App() {
 
@@ -79,7 +79,7 @@ function  App() {
             <Route path="/Exercise" component={Exercise}/>
             <Route path="/Outdoor" component={Outdooractivity}/>
             <Route exact path="/posts" component={PostPage}/> 
-
+            <Route path="/FAQ" component={FAQ}/>
 
           </Switch>
         </div>
