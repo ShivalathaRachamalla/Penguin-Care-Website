@@ -1,5 +1,6 @@
 package se.kth.sda7.wdgroupproject.recepies;
 
+
 import javax.persistence.*;
 
 @Entity
@@ -14,11 +15,7 @@ public class Recepie {
         @Column(name = "body")
         private String body;
 
-    public Recepie(Long id, String body, byte[] img) {
-        this.id = id;
-        this.body = body;
-        this.img = img;
-    }
+
 
     @Lob
     @Column(name = "img")
@@ -29,6 +26,12 @@ public class Recepie {
     public Recepie(String body) {
             this.body = body;
         }
+
+    public Recepie(Long id, String body, byte[] img) {
+        this.id = id;
+        this.body = body;
+        this.img = img;
+    }
 
     public void setImg(byte[] img) {
         this.img = img;

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Axios from "axios";
 
 function AddRecepieForm({ onSubmit }) {
   const [body, setBody] = useState("");
@@ -7,33 +6,15 @@ function AddRecepieForm({ onSubmit }) {
   const [img, setImg] = useState(null);
 
   const handleSubmit = () => {
-    // Invoke the passed in event callback
-    /* const reader = new FileReader();
-        reader.onload = (e) => {} */
     let formData = new FormData();
-    // formData.append("file", img);
-    // formData.append("name", img.name);
-    // formData.append("body", body);
-
-    formData = {
-      file: img,
-      name: img.name,
-    };
+    formData.append("file", img);
+    //formData.append("name", img.name);
 
     console.log(formData);
-    // Display the values
 
-    onSubmit({ body, img: formData });
-
-    // Axios.post("http://localhost:8080/recepies", form)
-    //   .then((res) => {
-    //     console.log("res", res);
-    //   })
-    //   .catch((e) => console.error(e));
-
-    // Clear the input field
+    onSubmit({ body: body });
     setBody("");
-    setImg("");
+    setImg(null);
   };
 
   const onHandleImg = (e) => {

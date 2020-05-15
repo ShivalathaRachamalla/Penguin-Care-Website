@@ -7,7 +7,7 @@ function AddRecepie({ recepie }) {
     <div className="recipe">
       <div class="image-txt-container">
         <img src={recepie && recepie.img} border="0" width="200"></img>
-        <p>{recepie && recepie.body}</p>
+        <p>{recepie.body}</p>
       </div>
     </div>
   );

@@ -15,7 +15,6 @@ public class RecepieController {
 
     @PostMapping("")
     public Recepie create(@RequestBody Recepie newRecepie){
-        System.out.println("Received data at backend side");
         return recepieService.save(newRecepie);
     }
 
