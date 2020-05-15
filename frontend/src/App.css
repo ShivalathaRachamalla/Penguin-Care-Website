@@ -30,7 +30,8 @@
 }
 .usericon
 {
-width: 34px;
+width: 40px;
+margin-left: 20px;
 }
 
 .card-title{
@@ -150,3 +151,8 @@ width:auto;
 height:auto;
 }
 
+.labelicon
+{
+  margin-block-start: 20px; 
+  font: icon;
+}

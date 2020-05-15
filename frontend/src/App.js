@@ -52,7 +52,7 @@ function  App() {
              {isLoggedIn? 
 
              <li className="nav-item">
-             <div>logged in as</div>
+             <div className="labelicon">Logged-In</div>
              <img className ="usericon" src={require("./assets/images/login_icon.png")} alt="user_icon"/>
              <span>{Auth.getDisplayName()}</span>
              <Link className="nav-link" onClick={()=> Auth.logout()}>Logout</Link></li>
