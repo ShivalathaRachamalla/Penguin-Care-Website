@@ -6,7 +6,11 @@ function AddRecepie({ recepie }) {
   return (
     <div className="recipe">
       <div class="image-txt-container">
-        <img src={recepie && recepie.img} border="0" width="200"></img>
+        <img
+          src={"data:image/png;base64, " + recepie.img}
+          border="0"
+          width="200"
+        ></img>
         <p>{recepie.body}</p>
       </div>
     </div>

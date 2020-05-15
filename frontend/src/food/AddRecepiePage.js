@@ -40,7 +40,7 @@ class AddRecepiePage extends React.Component {
 
     return (
       <div className="card">
-        <AddRecepieForm onSubmit={this.postRecepie} />
+        <AddRecepieForm onSubmit={(formData) => this.postRecepie(formData)} />
         <div className="recipe">
           {recepies.map((recepie) => (
             <AddRecepie key={recepie.id} recepie={recepie} />

@@ -8,11 +8,12 @@ function AddRecepieForm({ onSubmit }) {
   const handleSubmit = () => {
     let formData = new FormData();
     formData.append("file", img);
+    formData.append("body", body);
     //formData.append("name", img.name);
 
     console.log(formData);
 
-    onSubmit({ body: body });
+    onSubmit(formData);
     setBody("");
     setImg(null);
   };
