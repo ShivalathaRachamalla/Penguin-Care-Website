@@ -10,6 +10,16 @@ class RecepieApi {
       headers: { "Content-Type": "multipart/form-data" },
     });
   }
+
+  deleteRecepie(id) {
+    return Api.delete('/recepies/'+id);
+  }
+  
+  updateRecepie(recepie) {  
+    return Api.put("/recepies", recepie, {
+      headers: { "Content-Type": "multipart/form-data" },
+    });
+}
 }
 
 export default new RecepieApi();

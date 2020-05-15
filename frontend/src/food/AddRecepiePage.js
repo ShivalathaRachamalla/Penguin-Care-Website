@@ -29,6 +29,32 @@ class AddRecepiePage extends React.Component {
     }
   }
 
+  async deleteRecepie(recepie) {
+    try {
+        await RecepieApi.deleteRecepie(recepie.id);
+        const newRecepies = this.state.recepies.filter(r => r.id !== recepie.id);
+        this.setState({
+            recepies: newRecepies,
+        });
+    } catch (e) {
+        console.error(e);
+    }
+}
+
+async updateRecepie(recepie) {
+  try {
+      console.log(recepie);
+      const response = await RecepieApi.updateRecepie(recepie);
+      const recepie = response.data;
+      const newRecepies = this.state.recepies.filter(r => r.id !== recepie.id).concat(recepie);;
+      this.setState({
+        recepies: newRecepies,
+      });
+  } catch (e) {
+      console.error(e);
+  }
+}
+
   componentDidMount() {
     RecepieApi.getAllRecepies()
       .then(({ data }) => this.setState({ recepies: data }))
@@ -43,7 +69,8 @@ class AddRecepiePage extends React.Component {
         <AddRecepieForm onSubmit={(formData) => this.postRecepie(formData)} />
         <div className="recipe">
           {recepies.map((recepie) => (
-            <AddRecepie key={recepie.id} recepie={recepie} />
+            <AddRecepie key={recepie.id} recepie={recepie} onDeleteClick={(recepie) => this.deleteRecepie(recepie)} 
+            onHandleEdit={(recepie) => this.updateRecepie(recepie)}/>
           ))}{" "}
         </div>
       </div>

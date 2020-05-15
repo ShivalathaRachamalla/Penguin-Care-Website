@@ -32,8 +32,8 @@ function  App() {
       <nav className="navbar navbar-expand-lg navbar-light fixed-top">
         <div className="container">
           { isLoggedIn ?
-            <Link className="navbar-brand" to={"/"}><img className="logo" src={require("./assets/images/penlogo.png")} alt="logo"/></Link>
-            :<img className="logo" src={require("./assets/images/penlogo.png")} alt="logo"/>
+            <Link className="navbar-brand" to={"/"}><img className="logo" src={require("./assets/images/peng.jpg")} alt="logo"/></Link>
+            :<img className="logo" src={require("./assets/images/peng.jpg")} alt="logo"/>
           }
         <button onClick={e => toggleMenu()} className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
@@ -45,10 +45,7 @@ function  App() {
 
 
            <ul className="navbar-nav ml-auto">
-              {isLoggedIn ?<li className="nav-item">
-              <div className="postdown">
-                <Link className="nav-link" to={"/posts"}><img className="logo" src={require('./sharing.png')} alt="logo"/></Link></div>
-              </li> : null}
+     
              {isLoggedIn? 
 
              <li className="nav-item">
