@@ -15,7 +15,7 @@ import Exercise from './activity/Exercise';
 import Outdooractivity from './Outdoor/Outdooractivity';
 import PagesBar from "./components/navbar/PagesBar";
 import FAQ from './components/FAQ';
-
+import AboutUs from './components/AboutUs';
 function  App() {
 
   const [isLoggedIn, setLoggedIn] = useState(Auth.isLoggedIn());
@@ -47,7 +47,7 @@ function  App() {
            <ul className="navbar-nav ml-auto">
               {isLoggedIn ?<li className="nav-item">
               <div className="postdown">
-                <Link className="nav-link" to={"/posts"}>Posts</Link></div>
+                <Link className="nav-link" to={"/posts"}><img className="logo" src={require('./sharing.png')} alt="logo"/></Link></div>
               </li> : null}
              {isLoggedIn? 
 
@@ -80,7 +80,7 @@ function  App() {
             <Route path="/Outdoor" component={Outdooractivity}/>
             <Route exact path="/posts" component={PostPage}/> 
             <Route path="/FAQ" component={FAQ}/>
-
+            <Route path="/AboutUs" component={AboutUs}/>
           </Switch>
         </div>
       </div>
