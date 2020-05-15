@@ -18,11 +18,3 @@ function AddRecepie({ recepie }) {
 }
 
 export default AddRecepie;
-
-/* <div className="card mt-3">
-            <div className="card-body">
-                <p>
-                    { recepie.body }
-                </p>  
-            </div>
-        </div> */
