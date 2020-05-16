@@ -21,4 +21,14 @@ public class RecepieService {
     public Recepie save(Recepie newRecepie) {
         return repository.save(newRecepie);
     }
+
+    public void deleteById(Long id) {
+        repository.deleteById(id);
     }
+
+    public Recepie update(Recepie recepie) throws Exception {
+        return repository.findById(recepie.getId()).map(r -> {
+            return repository.save(recepie);
+        }).orElseThrow(() -> new Exception("Recipe not found"));
+    }
+}

@@ -2,8 +2,8 @@ package se.kth.sda7.wdgroupproject.posts;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import se.kth.sda7.wdgroupproject.auth.AuthService;
+import se.kth.sda7.wdgroupproject.user.User;
 import se.kth.sda7.wdgroupproject.user.UserService;
 
 import java.util.List;

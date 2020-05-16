@@ -2,6 +2,11 @@ package se.kth.sda7.wdgroupproject.comments;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import se.kth.sda7.wdgroupproject.auth.AuthService;
+import se.kth.sda7.wdgroupproject.posts.Post;
+import se.kth.sda7.wdgroupproject.posts.PostService;
+import se.kth.sda7.wdgroupproject.user.User;
+import se.kth.sda7.wdgroupproject.user.UserService;
 
 import java.util.List;
 
@@ -15,6 +20,10 @@ public class CommentController {
 
     @Autowired
     private AuthService authService;
+
+    @Autowired
+    private PostService postService;
+
 
     @PostMapping("/comments")
     public Comment postComment(@RequestBody Comment comment) {
@@ -33,10 +42,8 @@ public class CommentController {
 
     @PostMapping("posts/{postId}/comments/{email}")
     public Comment postComment(@RequestBody Comment comment, @PathVariable Long postId, @PathVariable String email) {
-        Post post = postService.getByID(postId);
         User user = userService.findUserByEmail(email);
         comment.setUser(user);
-        comment.setPost(post);
         return commentService.create(comment);
     }
 

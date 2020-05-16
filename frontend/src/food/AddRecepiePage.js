@@ -17,7 +17,6 @@ class AddRecepiePage extends React.Component {
 
     try {
       const response = await RecepieApi.postRecepie(recepieData);
-      console.log("response", response);
       const recepie = response.data;
       const newRecepies = this.state.recepies.concat(recepie);
 
@@ -31,29 +30,32 @@ class AddRecepiePage extends React.Component {
 
   async deleteRecepie(recepie) {
     try {
-        await RecepieApi.deleteRecepie(recepie.id);
-        const newRecepies = this.state.recepies.filter(r => r.id !== recepie.id);
-        this.setState({
-            recepies: newRecepies,
-        });
-    } catch (e) {
-        console.error(e);
-    }
-}
-
-async updateRecepie(recepie) {
-  try {
-      console.log(recepie);
-      const response = await RecepieApi.updateRecepie(recepie);
-      const recepie = response.data;
-      const newRecepies = this.state.recepies.filter(r => r.id !== recepie.id).concat(recepie);;
+      await RecepieApi.deleteRecepieById(recepie.id);
+      const newRecepies = this.state.recepies.filter(
+        (r) => r.id !== recepie.id
+      );
       this.setState({
         recepies: newRecepies,
       });
-  } catch (e) {
+    } catch (e) {
       console.error(e);
+    }
   }
-}
+
+  async updateRecepie(formData) {
+    try {
+      const response = await RecepieApi.updateRecepie(formData);
+      const recepie = response.data;
+      const newRecepies = this.state.recepies
+        .filter((r) => r.id !== recepie.id)
+        .concat(recepie);
+      this.setState({
+        recepies: newRecepies,
+      });
+    } catch (e) {
+      console.error(e);
+    }
+  }
 
   componentDidMount() {
     RecepieApi.getAllRecepies()
@@ -69,8 +71,12 @@ async updateRecepie(recepie) {
         <AddRecepieForm onSubmit={(formData) => this.postRecepie(formData)} />
         <div className="recipe">
           {recepies.map((recepie) => (
-            <AddRecepie key={recepie.id} recepie={recepie} onDeleteClick={(recepie) => this.deleteRecepie(recepie)} 
-            onHandleEdit={(recepie) => this.updateRecepie(recepie)}/>
+            <AddRecepie
+              key={recepie.id}
+              recepie={recepie}
+              onDeleteClick={() => this.deleteRecepie(recepie)}
+              onHandleEdit={(formData) => this.updateRecepie(formData)}
+            />
           ))}{" "}
         </div>
       </div>
