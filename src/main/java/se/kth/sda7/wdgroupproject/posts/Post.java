@@ -1,6 +1,7 @@
 package se.kth.sda7.wdgroupproject.posts;
 
 import se.kth.sda7.wdgroupproject.comments.Comment;
+import se.kth.sda7.wdgroupproject.user.User;
 
 import javax.persistence.*;
 
@@ -16,14 +17,26 @@ public class Post {
     @Column(name = "body")
     private String body;
 
-//    @OneToMany(mappedBy = "post", cascade = CascadeType.ALL)
-//    private List<Comment> comments = new ArrayList<>();
+    // @OneToMany(mappedBy = "post", cascade = CascadeType.ALL)
+    // private List<Comment> comments = new ArrayList<>();
+
+    @ManyToOne
+    private User user;
 
     public Post() {
     }
 
-    public Post(String body) {
+    public Post(String body, User user) {
         this.body = body;
+        this.user = user;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public Long getId() {
@@ -45,4 +58,3 @@ public class Post {
     public void addComment(Comment comment) {
     }
 }
-
