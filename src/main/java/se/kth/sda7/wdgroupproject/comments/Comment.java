@@ -1,9 +1,9 @@
 package se.kth.sda7.wdgroupproject.comments;
 
 import se.kth.sda7.wdgroupproject.posts.Post;
-import se.kth.sda7.wdgroupproject.user.User;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 @Table(name = "comment")
@@ -12,30 +12,33 @@ public class Comment {
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Column(name = "body")
     private String body;
+
+    @NotEmpty(message = "should not be empty")
+    @Column(name = "email")
+    private String email;
 
     @ManyToOne
     private Post post;
 
-    @ManyToOne
-    private User user;
-
     public Comment() {
     }
 
-    public Comment(Long id, String body, Post post) {
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Comment(Long id, String body, String email, Post post) {
         this.id = id;
         this.body = body;
+        this.email = email;
         this.post = post;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 
     public Long getId() {

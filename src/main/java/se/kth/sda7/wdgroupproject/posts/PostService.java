@@ -34,8 +34,6 @@ public class PostService {
         }).orElseThrow(() -> new Exception("Post not found"));
     }
 
-
-
     public void deleteById(Long id) {
         repository.deleteById(id);
     }
