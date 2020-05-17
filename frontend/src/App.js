@@ -27,27 +27,9 @@ function App() {
 
   const email = Auth.getDisplayName();
 
-<<<<<<< HEAD
-  return (<Router>
-    <div className="App">
-      <nav className="navbar navbar-expand-lg navbar-light fixed-top">
-        <div className="container">
-          { isLoggedIn ?
-            <Link className="navbar-brand" to={"/"}><img className="logo" src={require("./assets/images/pc.png")} alt="logo"/></Link>
-            :<img className="logo" src={require("./assets/images/pc.png")} alt="logo"/>
-          }
-        <button onClick={e => toggleMenu()} className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon"></span>
-           </button>
-
-         <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
- 
-         {isLoggedIn ? <PagesBar/> : null }
-=======
   const renderPostPage = (props) => {
     return <PostPage {...props} email={email} />;
   };
->>>>>>> master
 
   return (
     <Router>
@@ -145,3 +127,4 @@ function App() {
 }
 
 export default App;
+

@@ -10,8 +10,12 @@ class PostsApi {
   }
 
   createPost(post) {
-    return Api.post("/posts", post);
+    console.log(post,"post")
+    return Api.post("/posts", post, {
+      headers: { "Content-Type": "multipart/form-data" },
+    });
   }
+    
 
   updatePost(post) {
     return Api.put("/posts", post);
