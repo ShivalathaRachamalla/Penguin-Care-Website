@@ -17,9 +17,7 @@ class Exercise extends Component{
                 Self-quarantine can also cause additional stress and challenge the mental health of citizens. 
                 Physical activity and relaxation techniques can be valuable tools to help you remain calm and continue to protect your health during this time.
                 <p class="center"><img id="img" src={require("./stress.png")} border="0" width= "600" ></img></p>
-                </div>
-
-                <div class="auth-inner">We recommends 150 minutes of moderate-intensity or 75 minutes of vigorous-intensity physical activity per week, or a combination of both. 
+                We recommends 150 minutes of moderate-intensity or 75 minutes of vigorous-intensity physical activity per week, or a combination of both. 
                 These recommendations can still be achieved even at home, with no special equipment and with limited space. 
                 The following are some tips on how to stay active and reduce sedentary behaviour while at home in self-quarantine:
                 </div>
