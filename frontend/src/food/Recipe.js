@@ -192,8 +192,8 @@ class Recipe extends Component{
                     <p 
                      class="center-middle"> Ideas to help your family maintain a nutritious diet. 
                     </p>
-                    <img 
-                        id="img" src={require("./parentchild.jpg")} border="0" width= "1300">
+                    <img className="child"
+                        src={require("./parentchild.jpg")} border="0" width= "1300">
                     </img>
 
                     <p> The coronavirus disease (COVID-19) outbreak is upending life for families around the world. 
@@ -217,7 +217,7 @@ class Recipe extends Component{
                               Using fresh vegetables to cook large batches of soups, stews or other dishes will make them last longer and provide meal options for a few days. 
                                 These can also be frozen where possible and then quickly reheated.
                             </p>      
-                            <img id="img" src={require("./freshfood.jpg")} ></img>
+                            <img className="child" src={require("./freshfood.jpg")} ></img>
                         </div>
                     </p>
                     
@@ -240,7 +240,7 @@ class Recipe extends Component{
                     <p>
                         <div class="auth-inner">
                             <p> <font size="4" color="purple"> 3. Build up a stock of healthy snacks </font> </p>
-                            <img id="img" src={require("./snacks.jpg")} border="0" width= "300"></img>
+                            <img className="child" src={require("./snacks.jpg")} border="0" width= "300"></img>
                             <p>
                                 Children often need to eat a snack or two during the day to keep them going. Rather than giving kids sweets or salty snacks, opt for healthier options like nuts, cheese, yoghurt (preferably unsweetened), chopped or dried fruits, boiled eggs, or other locally available healthy options. 
                                 These foods are nutritious, more filling, and help build healthy eating habits that last a lifetime.
@@ -273,7 +273,7 @@ class Recipe extends Component{
                                 Try as much as possible to stick to fixed mealtimes as a family. 
                                 Such structures and routine can help reduce anxiety for children in these stressful situations.
                             </p>
-                            <img id="img" src={require("./family.jpg")} border="0" width= "600"></img>
+                            <img className="child" src={require("./family.jpg")} border="0" width= "600"></img>
                         </div>
                     </p>
 
