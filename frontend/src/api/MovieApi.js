@@ -17,8 +17,7 @@ class MovieApi {
     return Api.delete("/movies/" + id);
   }
 
-  updateRecepie(movie) {
-    console.log(movie, "u");
+  updateMovie(movie) {
     return Api.put("/movies", movie, {
       headers: { "Content-Type": "multipart/form-data" },
     });
