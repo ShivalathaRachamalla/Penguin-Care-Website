@@ -209,7 +209,6 @@ class Recipe extends Component{
                     <p class="left"> <font color="purple">  5 healthy eating tips </font></p> 
                     <p>
                       <div class="auth-inner"> 
-                          <img id="img" src={require("./freshfood.jpg")} border="0" width= "400"></img>
                             <p> <font size="4" color="purple"> 1. Keep up fruit and vegetable intake </font> </p>
                             Purchasing, storing and cooking fresh vegetables can be challenging in a lockdown, especially when parents are advised to limit trips outside of the home.
                             But wherever possible, it’s important to ensure children are still getting plenty of fruit and vegetables in their diet. 
@@ -218,6 +217,7 @@ class Recipe extends Component{
                               Using fresh vegetables to cook large batches of soups, stews or other dishes will make them last longer and provide meal options for a few days. 
                                 These can also be frozen where possible and then quickly reheated.
                             </p>      
+                            <img id="img" src={require("./freshfood.jpg")} ></img>
                         </div>
                     </p>
                     
