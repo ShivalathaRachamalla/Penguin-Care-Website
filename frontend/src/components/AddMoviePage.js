@@ -31,9 +31,7 @@ class AddMoviePage extends React.Component {
   async deleteMovie(movie) {
     try {
       await MovieApi.deleteMovieById(movie.id);
-      const newMovies = this.state.movies.filter(
-        (r) => r.id !== movie.id
-      );
+      const newMovies = this.state.movies.filter((r) => r.id !== movie.id);
       this.setState({
         movies: newMovies,
       });
@@ -42,9 +40,9 @@ class AddMoviePage extends React.Component {
     }
   }
 
-  async updateMovie(formData) {
+  async updateMovie(movieData) {
     try {
-      const response = await MovieApi.updateMovie(formData);
+      const response = await MovieApi.updateMovie(movieData);
       const movie = response.data;
       const newMovies = this.state.movies
         .filter((r) => r.id !== movie.id)
@@ -75,7 +73,7 @@ class AddMoviePage extends React.Component {
               key={movie.id}
               movie={movie}
               onDeleteClick={() => this.deleteMovie(movie)}
-              onHandleEdit={(formData) => this.updateMovie(formData)}
+              onHandleEdit={(movieData) => this.updateMovie(movieData)}
             />
           ))}{" "}
         </div>
