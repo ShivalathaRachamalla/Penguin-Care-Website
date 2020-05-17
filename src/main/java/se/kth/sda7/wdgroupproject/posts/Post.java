@@ -17,6 +17,18 @@ public class Post {
     @Column(name = "body")
     private String body;
 
+    public byte[] getImg() {
+        return img;
+    }
+
+    public void setImg(byte[] img) {
+        this.img = img;
+    }
+
+    @Lob
+    @Column(name = "img")
+    private byte[] img;
+
     // @OneToMany(mappedBy = "post", cascade = CascadeType.ALL)
     // private List<Comment> comments = new ArrayList<>();
 
@@ -26,9 +38,10 @@ public class Post {
     public Post() {
     }
 
-    public Post(String body, User user) {
+    public Post(String body, User user, byte[] img) {
         this.body = body;
         this.user = user;
+        this.img = img;
     }
 
     public User getUser() {
