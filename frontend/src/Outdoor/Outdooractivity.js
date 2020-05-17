@@ -1,8 +1,10 @@
 import React, { Component } from "react";
+import AddOutdoorActivityPage from "./AddOutdoorActivityPage";
 
 class Outdooractivity extends Component {
     render() {
         return (
+
         <div className="wrapper">
                         <div className="auth-wrapper">
                         <p class="center">Creative Outdoor Activities to Keep Your Kids Entertained During COVID-19 :   </p>
@@ -118,6 +120,16 @@ class Outdooractivity extends Component {
                             </p2>    
                         </div>          
                     </div>
+                    <div class="recipe">
+                                           <h5> Add your favourite outdoor activity: </h5>
+                                                <p>
+
+
+                                                    <AddOutdoorActivityPage />
+                                                </p>
+
+                                            </div>
+
                     </div>
         );
 
