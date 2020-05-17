@@ -46,6 +46,31 @@ class CommentList extends Component {
     }
   }
 
+  async updateComment(commentData) {
+    try {
+      const post = {
+        id: this.props.post.id,
+        body: this.props.post.body,
+        email: this.props.post.email,
+      };
+      const response = await CommentsApi.updateComment({
+        id: commentData.id,
+        body: commentData.body,
+        email: commentData.email,
+        post,
+      });
+      const comment = response.data;
+      const newComments = this.state.comments
+        .filter((c) => c.id !== comment.id)
+        .concat(commentData);
+      this.setState({
+        comments: newComments,
+      });
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
   componentDidMount() {
     const postId = this.props.post.id;
     CommentsApi.getAllCommentsByPostId(postId)
@@ -69,6 +94,7 @@ class CommentList extends Component {
             comment={comment}
             activeMail={this.props.mail}
             onDeleteClick={() => this.deleteComment(comment)}
+            onHandleEdit={(commentData) => this.updateComment(commentData)}
           />
         ))}
       </div>

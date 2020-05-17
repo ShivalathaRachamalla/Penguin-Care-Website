@@ -13,6 +13,10 @@ class CommentsApi {
     const params = { postId: id };
     return Api.get("/comments", { params });
   }
+
+  updateComment(comment) {
+    return Api.put("/comments", comment);
+  }
 }
 
 export default new CommentsApi();

@@ -17,11 +17,9 @@ function PostCard({ userMail, post, onDeleteClick, onHandleEdit }) {
   const onUpdateClick = () => {
     edit ? setEdit(false) : setEdit(true);
   };
-  console.log(post.email, "postmail");
-  console.log(userMail, "userMail");
 
   const handleEdit = () => {
-    onHandleEdit({ id: post.id, body: body });
+    onHandleEdit({ id: post.id, body: body, email: post.email });
     setEdit(false);
   };
 
@@ -44,9 +42,7 @@ function PostCard({ userMail, post, onDeleteClick, onHandleEdit }) {
           >
             Delete
           </button>
-        ) : (
-          false
-        )}
+        ) : null}
 
         {post.email == userMail ? (
           !edit ? (
