@@ -1,40 +1,40 @@
 import React from "react";
 
-function PostForm({onSubmit}) {
-    const [body, setBody] = React.useState("");
+function PostForm({ onSubmit }) {
+  const [body, setBody] = React.useState("");
 
-    const handleSubmit = () => {
-        // Invoke the passed in event callback
-        onSubmit({body: body});
+  const handleSubmit = () => {
+    // Invoke the passed in event callback
+    onSubmit({ body: body });
 
-        // Clear the input field
-        setBody("");
-    };
+    // Clear the input field
+    setBody("");
+  };
 
-    return (
-        <div className="card">
-            <div className="card-body">
-                <h3 className="font-weight-bold indigo-text py-2" >Post what do you know about Corona situation and help parents!</h3>
-                <div>
-                    <div className="form-group">
-                        <textarea 
-                            className="form-control"
-                            value={body}
-                            onChange={e => setBody(e.target.value)} />
-                    </div>
+  return (
+    <div className="card">
+      <div className="card-body">
+        <h3 className="font-weight-bold indigo-text py-2">
+          Post what do you know about Corona situation and help parents!
+        </h3>
+        <div>
+          <div className="form-group">
+            <textarea
+              className="form-control"
+              value={body}
+              onChange={(e) => setBody(e.target.value)}
+            />
+          </div>
 
-
-                    <div className="form-group">
-                        <button 
-                            className="btn btn-primary btn-sm" 
-                            onClick={handleSubmit}>
-                            Post
-                        </button>
-                    </div>
-                </div>
-            </div>
+          <div className="form-group">
+            <button className="btn btn-primary btn-sm" onClick={handleSubmit}>
+              Post
+            </button>
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 }
 
 export default PostForm;

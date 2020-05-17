@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CommentService {
@@ -18,15 +19,18 @@ public class CommentService {
     public void deleteById(Long id) { commentRepository.deleteById(id);
     }
 
-    /*
-    public Iterable<Comment> getAll() {
-        return commentRepository.findAll();
-    }
-    */
 
     public List<Comment> getAllByPostId(Long postId) {
         return commentRepository.findAllByPostId(postId);
     }
+
+    public Optional<Comment> update(Comment updatedComment)  {
+        return commentRepository.findById(updatedComment.getId()).map(post -> {
+
+            return commentRepository.save(updatedComment);
+        });
+    };
+
 
 }
 
