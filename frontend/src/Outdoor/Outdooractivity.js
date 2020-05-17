@@ -12,7 +12,7 @@ class Outdooractivity extends Component {
                             
                             </div>
                             
-                            <div class="auth-inner">To foster proper physical development of children, we need to involve them in age-appropriate physical activities daily
+                            <div class="auth-inner" class="margin">To foster proper physical development of children, we need to involve them in age-appropriate physical activities daily
                             Let them play on their own and create fun activities to engage their little brains.For many kids, this means being stuck indoors, as parents try to juggle school work, telework, and running a household, while managing any underlying pandemic stress. Reports of expensive bylaw tickets being issued for gathering in parks, 
                             or even playing in green spaces, are also a barrier to outdoor play.But experts say that it is critical for children to stay active, maintain a routine or set a schedule, and try to get outside as much as possible. Getting outdoors has both physical and mental health benefits, including increasing physical-activity levels, boosting mood, preventing anxiety, and contributing to a healthy immune system.  
                             </div>
