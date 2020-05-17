@@ -3,6 +3,7 @@ package se.kth.sda7.wdgroupproject.posts;
 import se.kth.sda7.wdgroupproject.comments.Comment;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 @Table(name = "post")
@@ -16,6 +17,7 @@ public class Post {
     @Column(name = "body")
     private String body;
 
+    @NotEmpty(message = "should not be empty")
     @Column(name = "email")
     private  String email;
 

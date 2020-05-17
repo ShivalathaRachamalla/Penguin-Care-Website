@@ -67,6 +67,7 @@ class CommentList extends Component {
           <Comment
             key={comment.id}
             comment={comment}
+            activeMail={this.props.mail}
             onDeleteClick={() => this.deleteComment(comment)}
           />
         ))}
