@@ -32,8 +32,8 @@ function  App() {
       <nav className="navbar navbar-expand-lg navbar-light fixed-top">
         <div className="container">
           { isLoggedIn ?
-            <Link className="navbar-brand" to={"/"}><img className="logo" src={require("./assets/images/peng.jpg")} alt="logo"/></Link>
-            :<img className="logo" src={require("./assets/images/peng.jpg")} alt="logo"/>
+            <Link className="navbar-brand" to={"/"}><img className="logo" src={require("./assets/images/pc.png")} alt="logo"/></Link>
+            :<img className="logo" src={require("./assets/images/pc.png")} alt="logo"/>
           }
         <button onClick={e => toggleMenu()} className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
