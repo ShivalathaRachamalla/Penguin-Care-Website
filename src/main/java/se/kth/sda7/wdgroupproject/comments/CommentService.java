@@ -18,11 +18,6 @@ public class CommentService {
     public void deleteById(Long id) { commentRepository.deleteById(id);
     }
 
-    /*
-    public Iterable<Comment> getAll() {
-        return commentRepository.findAll();
-    }
-    */
 
     public List<Comment> getAllByPostId(Long postId) {
         return commentRepository.findAllByPostId(postId);
