@@ -1,14 +1,26 @@
-import React from "react";
+import React,{useState} from "react";
 
-function PostForm({ onSubmit }) {
-  const [body, setBody] = React.useState("");
+function PostForm({ onSubmit,email }) {
+  const [body, setBody] = useState("");
+  const [img, setImg] = useState(null);
+  
 
   const handleSubmit = () => {
+    let formData = new FormData();
+    formData.append("file", img);
+    formData.append("body", body);
+    formData.append("email", email)
     // Invoke the passed in event callback
-    onSubmit({ body: body });
+    onSubmit(formData);
 
     // Clear the input field
     setBody("");
+    setImg(null);
+  };
+
+  const onHandleImg = (e) => {
+    e.preventDefault();
+    setImg(e.target.files[0]);
   };
 
   return (
@@ -24,6 +36,7 @@ function PostForm({ onSubmit }) {
               value={body}
               onChange={(e) => setBody(e.target.value)}
             />
+            <input type="file" onChange={onHandleImg} />
           </div>
 
           <div className="form-group">
