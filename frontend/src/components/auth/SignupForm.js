@@ -9,8 +9,8 @@ function SingnupForm({onSubmit}) {
 
 
     return (
-       <form>
-            <h3>Sign Up</h3>
+       <form className="auth-wrapper-feature">
+            <h3>Sign Up</h3> 
 
             <div className="form-group">
                 <label>First name</label>
