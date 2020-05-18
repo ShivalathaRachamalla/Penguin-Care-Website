@@ -40,14 +40,14 @@ function App() {
               <Link className="navbar-brand" to={"/"}>
                 <img
                   className="logo"
-                  src={require("./assets/images/peng.jpg")}
+                  src={require("./assets/images/pc.png")}
                   alt="logo"
                 />
               </Link>
             ) : (
               <img
                 className="logo"
-                src={require("./assets/images/peng.jpg")}
+                src={require("./assets/images/pc.png")}
                 alt="logo"
               />
             )}
