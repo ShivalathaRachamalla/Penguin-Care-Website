@@ -10,12 +10,13 @@ function AddMovie({ movie, onDeleteClick, onHandleEdit }) {
     edit ? setEdit(false) : setEdit(true);
   };
   const handleEdit = () => {
-    let formData = new FormData();
-    formData.append("id", movie.id);
-    formData.append("file", img);
-    formData.append("body", body);
-    onHandleEdit(formData);
+    let movieData = new FormData();
+    movieData.append("id", movie.id);
+    movieData.append("file", img);
+    movieData.append("body", body);
+    onHandleEdit(movieData);
     setEdit(false);
+    setImg(null);
   };
   const onHandleImg = (e) => {
     e.preventDefault();

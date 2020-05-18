@@ -19,10 +19,7 @@ class RecepieApi {
 
   updateRecepie(recepie) {
     return Api.put("/recepies", recepie);
-    //console.log(recepie, "u");
-    //return Api.put("/recepies", recepie, {
-      //headers: { "Content-Type": "multipart/form-data" },
-    //});
+    
   }
 }
 
