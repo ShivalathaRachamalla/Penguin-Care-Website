@@ -1,27 +1,29 @@
 import Api from "./Api";
 
 class PostsApi {
-    getAllPosts() {
-        return Api.get('/posts');
-    }
+  getAllPosts() {
+    return Api.get("/posts");
+  }
 
-    getPostById(id) {
-        return Api.get('/posts/'+id);
-    }
+  getPostById(id) {
+    return Api.get("/posts/" + id);
+  }
 
-    createPost(post) {
-        return Api.post('/posts', post);
-    }
+  createPost(post) {
+    console.log(post,"post")
+    return Api.post("/posts", post, {
+      headers: { "Content-Type": "multipart/form-data" },
+    });
+  }
+    
 
-    updatePost(post) {  
-        console.log('...',post);
-        return Api.put('/posts', post);
-    }
+  updatePost(post) {
+    return Api.put("/posts", post);
+  }
 
-    deletePost(id) {
-        return Api.delete('/posts/'+id);
-    } 
-
+  deletePost(id) {
+    return Api.delete("/posts/" + id);
+  }
 }
 
 export default new PostsApi();

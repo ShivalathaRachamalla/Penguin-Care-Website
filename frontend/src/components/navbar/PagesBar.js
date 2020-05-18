@@ -36,12 +36,18 @@ function PagesBar(){
 
              </li>
              <li className="nav-item">
-               <Link className="nav-link" to={"/FAQ"}>FAQ</Link></li>
+               <Link className="nav-link" to={"/FAQ"}><img className="posticon" src={require('./qu.png')} alt="FAQ"/></Link></li>
             
               <li className="nav-item">
-               <Link className="nav-link" to={"/AboutUs"}>AboutUs</Link></li>
+               <Link className="nav-link" to={"/AboutUs"}><img className="posticon" src={require('./about.png')} alt="about"/></Link></li>
+               <li className="nav-item">
+    
+      <Link className="nav-link" to={"/posts"}><img className="posticon" src={require('./newpost.png')} alt="logo"/></Link>
+    </li> 
              </ul>
+
     </>
+    
   );
 
 }

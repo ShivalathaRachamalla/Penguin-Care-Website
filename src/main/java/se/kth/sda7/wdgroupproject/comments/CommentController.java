@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+import java.util.Optional;
 
 @RestController
 public class CommentController {
@@ -15,15 +15,21 @@ public class CommentController {
     public Comment postComment(@RequestBody Comment comment) {
         return commentService.create(comment);
     }
+
     @DeleteMapping("/comments/{id}")
-    public void delete(@PathVariable Long id){
+    public void delete(@PathVariable Long id) {
         commentService.deleteById(id);
     }
 
     @GetMapping("/comments")
-    public List<Comment> getAll(@RequestParam("postId") Long postId){
+    public List<Comment> getAll(@RequestParam("postId") Long postId) {
         return commentService.getAllByPostId(postId);
     }
 
-}
+    @PutMapping("/comments")
+    public Optional<Comment> update(@RequestBody Comment updatedComment){
+        return commentService.update(updatedComment);
+    }
 
+
+}

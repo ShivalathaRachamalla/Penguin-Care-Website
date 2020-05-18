@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import '../App.css';
+import AddMoviePage from "./AddMoviePage";
 class Movies extends Component {
     render() {
         return (
@@ -151,6 +152,12 @@ class Movies extends Component {
                                 image" width="400" height="350" align="center" />
                         </div>
                 </ol>
+                <div class="movie">
+                            <p>
+                                <AddMoviePage />  
+                            </p>
+                            
+                        </div> 
                 </div>
                
                
