@@ -3,7 +3,6 @@ package se.kth.sda7.wdgroupproject.posts;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import se.kth.sda7.wdgroupproject.recepies.Recepie;
 
 import java.io.IOException;
 import java.util.List;
@@ -15,17 +14,24 @@ public class PostController {
     @Autowired
     public PostService postService;
 
+
     @PostMapping("")
-    public Post create(@RequestBody Post newPost) {
-        return postService.save(newPost);
-    }
-    @PostMapping("")
-    public Post create(@RequestParam("file") MultipartFile file, @RequestParam("body") String body,@RequestParam("email") String email)throws IOException {
-        Post  post = new Post();
-        post.setBody(body);
-        post.setImg(file.getBytes());
-        post.setEmail(email);
-        return postService.save(post);
+    public Object create(@RequestParam("file") MultipartFile file, @RequestParam("body") String body, @RequestParam("email") String email)throws IOException {
+        if (!file.isEmpty()) {
+            try {
+                Post  post = new Post();
+                post.setBody(body);
+                post.setImg(file.getBytes());
+                post.setEmail(email);
+                return postService.save(post);
+                //return "You successfully uploaded " + name + "!";
+            } catch (Exception e) {
+                return "You failed to upload ";
+            }
+        } else {
+            return "You failed to upload image";
+        }
+
     }
 
 

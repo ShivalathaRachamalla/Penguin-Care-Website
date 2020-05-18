@@ -28,6 +28,7 @@ public class Post {
 
     @Lob
     @Column(name = "img")
+    @Basic(optional = true)
     private byte[] img;
 
     // @OneToMany(mappedBy = "post", cascade = CascadeType.ALL)
