@@ -18,9 +18,7 @@ class RecepieApi {
   }
 
   updateRecepie(recepie) {
-    return Api.put("/recepies", recepie, {
-      headers: { "Content-Type": "multipart/form-data" },
-    });
+    return Api.put("/recepies", recepie);
   }
 }
 
