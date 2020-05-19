@@ -26,7 +26,7 @@ public class Post {
         this.img = img;
     }
 
-    @Lob
+   // @Lob
     @Column(name = "img")
     @Basic(optional = true)
     private byte[] img;
