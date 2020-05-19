@@ -12,7 +12,7 @@ class Outdooractivity extends Component {
                             
                             </div>
                             
-                            <div class="auth-inner">To foster proper physical development of children, we need to involve them in age-appropriate physical activities daily
+                            <div class="auth-inner" class="margin">To foster proper physical development of children, we need to involve them in age-appropriate physical activities daily
                             Let them play on their own and create fun activities to engage their little brains.For many kids, this means being stuck indoors, as parents try to juggle school work, telework, and running a household, while managing any underlying pandemic stress. Reports of expensive bylaw tickets being issued for gathering in parks, 
                             or even playing in green spaces, are also a barrier to outdoor play.But experts say that it is critical for children to stay active, maintain a routine or set a schedule, and try to get outside as much as possible. Getting outdoors has both physical and mental health benefits, including increasing physical-activity levels, boosting mood, preventing anxiety, and contributing to a healthy immune system.  
                             </div>
@@ -88,7 +88,7 @@ class Outdooractivity extends Component {
 
                     <div class="recipe"> 
                             <div class="image-txt-container">
-                            <img src={require('./rockpainting.gif')} border="0"height= "300" width= "400"  ></img>
+                            <img src={require('./rockpainting.jpg')} border="0"height= "300" width= "400"  ></img>
                             <p2 class="margin">
                               <p> <font size="6" color="purple"> Rockpainting </font> </p>
                               Rock painting is one of our favorite activities. Get outside with your children to collect rocks, and then paint them, for a rock activity that kids are sure to love.
@@ -101,7 +101,7 @@ class Outdooractivity extends Component {
 
                     <div class="recipe"> 
                             <div class="image-txt-container">
-                            <img src={require('./tresurehunt.jpg')} border="0"height= "300" width= "500" ></img>
+                            <img src={require('./treasurehunt.jpg')} border="0"height= "300" width= "500" ></img>
                             <p2 class="margin">
                               <p> <font size="6" color="purple"> Plan a Treasure Hunt </font> </p>
                               With a little advanced planning, send your kids on a treasure hunt. Start with a homemade map you’ve stained with coffee and scorched the edges.
@@ -121,7 +121,7 @@ class Outdooractivity extends Component {
                         </div>          
                     </div>
                     <div class="recipe">
-                                           <h5> Add your favourite outdoor activity: </h5>
+                                           
                                                 <p>
 
 

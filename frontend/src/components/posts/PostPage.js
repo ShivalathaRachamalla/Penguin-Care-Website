@@ -69,7 +69,7 @@ class PostsPage extends React.Component {
     const userMail = this.props.email;
 
     return (
-      <div className="card">
+      <div className="card" >
         <PostForm
         email={userMail}
           onSubmit={(postData) => this.createPost(postData)}

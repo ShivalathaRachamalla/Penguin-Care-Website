@@ -32,9 +32,9 @@ showDropdownMenu(event) {
 
   render() {
     return (
-        <div  className="dropleft" >
+        <div  className="dropdown" >
           
-         <div className="btn btn-secondary dropdown-toggle dropdown-toggle-split" onClick={this.showDropdownMenu}> Activities </div>
+         <div className="btn btn-light dropdown-toggle dropdown-toggle-split" onClick={this.showDropdownMenu}> Activities </div>
 
           { this.state.displayMenu ? (
           <ul>

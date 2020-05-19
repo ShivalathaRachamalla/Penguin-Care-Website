@@ -40,14 +40,14 @@ function App() {
               <Link className="navbar-brand" to={"/"}>
                 <img
                   className="logo"
-                  src={require("./assets/images/pc.png")}
+                  src={require("./assets/images/pcaring.png")}
                   alt="logo"
                 />
               </Link>
             ) : (
               <img
                 className="logo"
-                src={require("./assets/images/pc.png")}
+                src={require("./assets/images/pcaring.png")}
                 alt="logo"
               />
             )}
@@ -120,7 +120,7 @@ function App() {
               <Route path="/AboutUs" component={AboutUs} />
             </Switch>
           </div>
-        </div>
+      </div>
       </div>
     </Router>
   );

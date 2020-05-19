@@ -13,9 +13,9 @@ class AboutUs extends Component {
                         <img src={require('../img/anu.png')} alt="team member
                     image"  width="250px" height="300px"/>
                         </div>
-                        <h3 class="tmember">Anu Sindhura Madava</h3>
+                        <h3 class="tmember">Anu Sindhura</h3>
                         <p class="role">Full Stack Developer</p>
-                        <p>I am a gril who always takes time to live life,which inspirer’s my work.
+                        <p>I am a person who always takes time to live life,which inspires my work.
 I like to solve puzzles and travel.</p>
                     </div>
                     <div class="team_member">
