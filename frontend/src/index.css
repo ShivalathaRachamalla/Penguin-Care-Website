@@ -10,10 +10,7 @@ body {
   font-weight: 400;
   font-family: "Times New Roman", Times, serif;
   background: linear-gradient(to right, #3498db);
-  /* background-size: auto; */
-  background-image: url("./background.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  
   
 
 }
@@ -26,10 +23,17 @@ h1,h2,h3,h4,h5,h6,label,span {
 body, html, .App, #root, .auth-wrapper {
   width: auto;
   height: auto;
+  
 }
+body, html, .App, #root {
+background-repeat: no-repeat, repeat;
+background-image: url("./background.png");
+  background-size: cover;
+  height: 680px;
+} 
 
 .navbar-light {
-  background-color: rgb(145, 190, 241);
+  background-color: rgb(138, 141, 147);
   height: 90px;
 }
 

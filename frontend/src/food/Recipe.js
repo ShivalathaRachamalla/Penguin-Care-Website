@@ -273,7 +273,7 @@ class Recipe extends Component{
                                 Try as much as possible to stick to fixed mealtimes as a family. 
                                 Such structures and routine can help reduce anxiety for children in these stressful situations.
                             </p>
-                            <img className="child" src={require("./family.jpg")} border="0" width= "600"></img>
+                            <img className="child" src={require("./family.png")} border="0" width= "600"></img>
                         </div>
                     </p>
 
