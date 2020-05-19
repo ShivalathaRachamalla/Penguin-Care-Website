@@ -3,18 +3,10 @@ package se.kth.sda7.wdgroupproject.outdooractivities;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import se.kth.sda7.wdgroupproject.outdooractivities.OutdoorActivity;
-import se.kth.sda7.wdgroupproject.outdooractivities.OutdoorActivityService;
+import se.kth.sda7.wdgroupproject.movies.Movie;
 
 import java.io.IOException;
 import java.util.List;
-
-        import org.springframework.beans.factory.annotation.Autowired;
-        import org.springframework.web.bind.annotation.*;
-        import org.springframework.web.multipart.MultipartFile;
-
-        import java.io.IOException;
-        import java.util.List;
 
 @RestController
 @RequestMapping("/outdooractivities")
@@ -32,10 +24,22 @@ public class OutdoorActivityController {
         return OutdoorActivityService.save(outdooractivity);
     }
 
-
-
     @GetMapping("")
     public List<OutdoorActivity> getAll(){ return OutdoorActivityService.getAll();
+    }
+
+    @PutMapping("")
+    public OutdoorActivity update(@RequestParam("file") MultipartFile file, @RequestParam("body") String body, @RequestParam("id") Long id) throws Exception {
+        OutdoorActivity activity = new OutdoorActivity();
+        activity.setId(id);
+        activity.setBody(body);
+        activity.setImg(file.getBytes());
+        return OutdoorActivityService.update(activity);
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id) {
+        OutdoorActivityService.deleteById(id);
     }
 
 
