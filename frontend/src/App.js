@@ -120,23 +120,6 @@ function App() {
               <Route path="/AboutUs" component={AboutUs} />
             </Switch>
           </div>
-      <div className="auth-wrapper">
-        <div className="auth-inner">
-          <Switch>
-            <Route exact path='/' component={Home} />
-            <Route className="auth-wrapper-feature" path="/Login" component={LoginPage} />
-            <Route  path="/sign-up" component={SignupPage} />
-            <Route path="/Indoor" component={Indoor}/>
-            <Route path="/Movies" component={Movies} />
-            <Route path="/Recipe" component={Recipe}/>
-            <Route path="/Exercise" component={Exercise}/>
-            <Route path="/Outdoor" component={Outdooractivity}/>
-            <Route exact path="/posts" component={PostPage}/> 
-            <Route path="/FAQ" component={FAQ}/>
-            <Route path="/AboutUs" component={AboutUs}/>
-          </Switch>
-        </div>
-      </div>
       </div>
       </div>
     </Router>
