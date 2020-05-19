@@ -160,6 +160,18 @@ class Exercise extends Component{
                     This exercise strengthens your glutes.
                     </a>
                     </div>
+
+                    <div class="auth-links">
+                    <img id="img" src={require("./surya.png")} border="0" width= "200"></img>
+                    <a> <p> <font size="4" color="blue">Surya Namaskara</font> </p>
+                    Surya Namaskara is best done early morning on an empty stomach. 
+                    Each round of Sun Salutation consists of two sets, and each set is composed of 12 yoga poses. 
+                    You might find several versions on how to practice Sun Salutation. 
+                    However, it is advisable to stick to one particular version and practice it regularly for best results.
+                    </a>
+                    </div>
+
+                    
                 
                 <div>
                 

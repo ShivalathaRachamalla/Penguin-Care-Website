@@ -88,7 +88,7 @@ class Outdooractivity extends Component {
 
                     <div class="recipe"> 
                             <div class="image-txt-container">
-                            <img src={require('./rockpainting.gif')} border="0"height= "300" width= "400"  ></img>
+                            <img src={require('./rockpainting.jpg')} border="0"height= "300" width= "400"  ></img>
                             <p2 class="margin">
                               <p> <font size="6" color="purple"> Rockpainting </font> </p>
                               Rock painting is one of our favorite activities. Get outside with your children to collect rocks, and then paint them, for a rock activity that kids are sure to love.
@@ -101,7 +101,7 @@ class Outdooractivity extends Component {
 
                     <div class="recipe"> 
                             <div class="image-txt-container">
-                            <img src={require('./tresurehunt.jpg')} border="0"height= "300" width= "500" ></img>
+                            <img src={require('./treasurehunt.jpg')} border="0"height= "300" width= "500" ></img>
                             <p2 class="margin">
                               <p> <font size="6" color="purple"> Plan a Treasure Hunt </font> </p>
                               With a little advanced planning, send your kids on a treasure hunt. Start with a homemade map you’ve stained with coffee and scorched the edges.
@@ -121,7 +121,7 @@ class Outdooractivity extends Component {
                         </div>          
                     </div>
                     <div class="recipe">
-                                           <h5> Add your favourite outdoor activity: </h5>
+                                           
                                                 <p>
 
 

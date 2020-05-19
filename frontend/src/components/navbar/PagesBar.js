@@ -17,7 +17,7 @@ function PagesBar(){
     <>
              <ul className="navbar-nav ml-auto">
           <li >   
-          <div style={{display: 'flex', justifyContent: 'center'}} > 
+          <div style={{display: 'flex', justifyContent: 'center', color:'black'}} > 
           <Dropdown/>
           </div>
           </li> 
