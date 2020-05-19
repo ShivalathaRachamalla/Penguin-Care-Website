@@ -209,16 +209,6 @@ class Recipe extends Component{
                     <p class="left"> <font color="purple">  Five healthy eating tips </font></p> 
                     <div>
                       <div class="auth-inner"> 
-<<<<<<< HEAD
-                            <p> <font size="4" color="purple"> 1. Keep up fruit and vegetable intake </font> </p>
-                            Purchasing, storing and cooking fresh vegetables can be challenging in a lockdown, especially when parents are advised to limit trips outside of the home.
-                            But wherever possible, it’s important to ensure children are still getting plenty of fruit and vegetables in their diet. 
-                            <p> Whenever it is possible to get hold of fresh produce, do so. 
-                                As well as being eaten fresh, fruits and vegetables can be frozen where possible and will retain most of their nutrients and flavor. 
-                              Using fresh vegetables to cook large batches of soups, stews or other dishes will make them last longer and provide meal options for a few days. 
-                                These can also be frozen where possible and then quickly reheated.
-                            </p>      
-=======
                            <p> <font size="4" color="purple"> 1. Keep up fruit and vegetable intake </font></p>
                             <p>Purchasing, storing and cooking fresh vegetables can be challenging in a lockdown, especially when parents are advised to limit trips outside of the home.
                             But wherever possible, it’s important to ensure children are still getting plenty of fruit and vegetables in their diet. 
@@ -226,7 +216,6 @@ class Recipe extends Component{
                             As well as being eaten fresh, fruits and vegetables can be frozen where possible and will retain most of their nutrients and flavor. 
                             Using fresh vegetables to cook large batches of soups, stews or other dishes will make them last longer and provide meal options for a few days. 
                             These can also be frozen where possible and then quickly reheated.</p>
->>>>>>> master
                             <img className="child" src={require("./freshfood.jpg")} ></img>
                         </div>
                     </div>
