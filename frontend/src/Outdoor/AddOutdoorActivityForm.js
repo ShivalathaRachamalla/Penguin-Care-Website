@@ -9,9 +9,6 @@ function AddOutdoorActivityForm({ onSubmit }) {
     let formData = new FormData();
     formData.append("file", img);
     formData.append("body", body);
-    //formData.append("name", img.name);
-
-    console.log(formData);
 
     onSubmit(formData);
     setBody("");

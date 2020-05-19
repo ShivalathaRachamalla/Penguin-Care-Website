@@ -16,20 +16,17 @@ public class OutdoorActivityService {
         return repository.findAll();
     }
 
-
     public OutdoorActivity save(OutdoorActivity newOutdoorActivity) {
         return repository.save(newOutdoorActivity);
     }
 
     public void deleteById(Long id) {
-
+        repository.deleteById(id);
     }
 
-    public OutdoorActivity update(OutdoorActivity outdoorActivity) throws Exception {
-        return repository.findById(outdoorActivity.getId()).map(r -> {
-            return repository.save(outdoorActivity);
-        }).orElseThrow(() -> new Exception("Activity not found"));
-
+    public OutdoorActivity update(OutdoorActivity activity) throws Exception {
+        return repository.findById(activity.getId()).map(r -> {
+            return repository.save(activity);
+        }).orElseThrow(() -> new Exception("Movie not found"));
     }
 }
-
