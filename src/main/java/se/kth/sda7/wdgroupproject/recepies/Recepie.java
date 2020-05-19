@@ -26,6 +26,10 @@ public class Recepie {
     @Column(name = "prepTime")
     private String prepTime;
 
+    @Lob
+    @Column(name = "img")
+    private byte[] img;
+
     public Recepie(Long id, String body, String name, String ingredients, String preparation, String prepTime,
             byte[] img) {
         this.id = id;
@@ -69,36 +73,6 @@ public class Recepie {
         this.prepTime = prepTime;
     }
 
-    @Column(name = "preparation")
-    private String preparation;
-
-    @Column(name = "prepTime")
-    private String prepTime;
-
-    @Lob
-    @Column(name = "img")
-    private byte[] img;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getIngredients() {
-        return ingredients;
-    }
-
-    public void setIngredients(String ingredients) {
-        this.ingredients = ingredients;
-    }
-
-    public String getPreparation() {
-        return preparation;
-    }
-
     public Recepie() {
     }
 
@@ -132,7 +106,4 @@ public class Recepie {
         this.body = body;
     }
 
-    public void setPreparation(String preparation) {
-        this.preparation = preparation;
-    }
 }
