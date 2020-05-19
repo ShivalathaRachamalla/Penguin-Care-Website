@@ -30,7 +30,7 @@ body, html, .App, #root, .auth-wrapper {
 
 .navbar-light {
   background-color: rgb(145, 190, 241);
-  height: 110px;
+  height: 90px;
 }
 
 .auth-wrapper {

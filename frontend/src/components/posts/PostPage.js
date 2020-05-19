@@ -14,10 +14,10 @@ class PostsPage extends React.Component {
 
   async createPost(postData) {
     try {
-      const response = await PostsApi.createPost({
-        body: postData.body,
-        email: this.props.email,
-      });
+      const response = await PostsApi.createPost(
+         postData
+        
+      );
       const post = response.data;
       const newPosts = this.state.posts.concat(post);
 
@@ -71,7 +71,8 @@ class PostsPage extends React.Component {
     return (
       <div className="card">
         <PostForm
-          onSubmit={(postData) => this.createPost(postData, userMail)}
+        email={userMail}
+          onSubmit={(postData) => this.createPost(postData)}
         />
 
         {posts.map((post) => (

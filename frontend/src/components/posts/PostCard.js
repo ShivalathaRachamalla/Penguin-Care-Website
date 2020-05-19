@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 import CommentList from "../comments/CommentList";
 
 function PostCard({ userMail, post, onDeleteClick, onHandleEdit }) {
-  /* function PostCard({post, onDeleteClick, onUpdateClick}) {*/
+  
 
   const [show, setShow] = useState(false);
   const [edit, setEdit] = useState(false);
   const [body, setBody] = useState(post);
-
+  const [img, setImg] = useState(null);
   const showComments = () => {
     show ? setShow(false) : setShow(true);
   };
@@ -19,8 +19,12 @@ function PostCard({ userMail, post, onDeleteClick, onHandleEdit }) {
   };
 
   const handleEdit = () => {
-    onHandleEdit({ id: post.id, body: body, email: post.email });
+    onHandleEdit({ id: post.id, body: body, email: post.email,img:post.img });
     setEdit(false);
+  };
+  const onHandleImg = (e) => {
+    e.preventDefault();
+    setImg(e.target.files[0]);
   };
 
   return (
@@ -35,6 +39,11 @@ function PostCard({ userMail, post, onDeleteClick, onHandleEdit }) {
           </textarea>
         )}
 
+            <img
+              src={"data:image/png;base64, " + post.img}
+              border="0"
+              width="200"
+            ></img>
         {post.email == userMail ? (
           <button
             className="btn btn-danger btn-sm mb-4 float-right"
@@ -71,6 +80,7 @@ function PostCard({ userMail, post, onDeleteClick, onHandleEdit }) {
           </button>
 
           {show ? <CommentList mail={userMail} post={post} /> : null}
+
         </div>
       </div>
     </div>

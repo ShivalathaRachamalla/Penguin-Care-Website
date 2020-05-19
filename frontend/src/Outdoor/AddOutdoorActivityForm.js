@@ -1,19 +1,19 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 
-function PostForm({ onSubmit,email }) {
+function AddOutdoorActivityForm({ onSubmit }) {
   const [body, setBody] = useState("");
+  // const [file, setFile] = useState(null);
   const [img, setImg] = useState(null);
-  
 
   const handleSubmit = () => {
     let formData = new FormData();
     formData.append("file", img);
     formData.append("body", body);
-    formData.append("email", email)
-    // Invoke the passed in event callback
-    onSubmit(formData);
+    //formData.append("name", img.name);
 
-    // Clear the input field
+    console.log(formData);
+
+    onSubmit(formData);
     setBody("");
     setImg(null);
   };
@@ -22,27 +22,33 @@ function PostForm({ onSubmit,email }) {
     e.preventDefault();
     setImg(e.target.files[0]);
   };
-
+  const imageUploadHandler = () => {};
   return (
     <div className="card">
       <div className="card-body">
         <h3 className="font-weight-bold indigo-text py-2">
-          Post what do you know about Corona situation and help parents!
+          {" "}
+          Add your OutdoorActivity{" "}
         </h3>
         <div>
           <div className="form-group">
             <textarea
               className="form-control"
               value={body}
-              onChange={(e) => setBody(e.target.value)}
+              onChange={(e) => {
+                e.preventDefault();
+
+                setBody(e.target.value);
+              }}
             />
             <input type="file" onChange={onHandleImg} />
           </div>
 
           <div className="form-group">
             <button className="btn btn-primary btn-sm" onClick={handleSubmit}>
-              Post
+              Add
             </button>
+            {/*  <button onClick={() => imageUploadHandler}>Upload Image</button> */}
           </div>
         </div>
       </div>
@@ -50,4 +56,4 @@ function PostForm({ onSubmit,email }) {
   );
 }
 
-export default PostForm;
+export default AddOutdoorActivityForm;

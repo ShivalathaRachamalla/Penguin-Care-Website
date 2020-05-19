@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 
 function AddRecepie({ recepie, onDeleteClick, onHandleEdit }) {
   const [edit, setEdit] = useState(false);
-  const [body, setBody] = useState(recepie);
-  const [name, setName] = useState("");
-  const [ingredients, setIngredients] = useState("");
-  const [preparation, setPreparation] = useState("");
-  const [prepTime, setPrepTime] = useState("");
+  const [body, setBody] = useState(recepie.body);
+  const [name, setName] = useState(recepie.name);
+  const [ingredients, setIngredients] = useState(recepie.ingredients);
+  const [preparation, setPreparation] = useState(recepie.preparation);
+  const [prepTime, setPrepTime] = useState(recepie.prepTime);
   //const [rating, setRating] = useState(1);
   const onUpdateClick = () => {
     edit ? setEdit(false) : setEdit(true);
@@ -33,6 +33,12 @@ function AddRecepie({ recepie, onDeleteClick, onHandleEdit }) {
       prepTime: prepTime,
     });
     setEdit(false);
+    //let formData = new FormData();
+    //formData.append("id", recepie.id);
+    //formData.append("file", recepie.img);
+    //formData.append("body", body);
+    //onHandleEdit(formData);
+    //setEdit(false);
   };
   /* const onHandleImg = (e) => {
     e.preventDefault();

@@ -3,6 +3,7 @@ package se.kth.sda7.wdgroupproject.recepies;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import se.kth.sda7.wdgroupproject.posts.Post;
 
 import java.io.IOException;
 import java.util.List;
@@ -32,13 +33,17 @@ public class RecepieController {
     public List<Recepie> getAll(){ return recepieService.getAll();
     }
 
-    @PutMapping("")
+    /*@PutMapping("")
     public Recepie update(@RequestParam("file") MultipartFile file, @RequestParam("body") String body, @RequestParam("id") Long id) throws Exception {
         Recepie  recepie = new Recepie();
         recepie.setId(id);
         recepie.setBody(body);
         recepie.setImg(file.getBytes());
-        return recepieService.update(recepie);
+        return recepieService.update(recepie);*/
+    @PutMapping("")
+    public Recepie update(@RequestBody Recepie updatedRecepie) throws Exception {
+        return recepieService.update(updatedRecepie);
     }
+
 
 }
