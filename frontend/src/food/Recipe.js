@@ -206,9 +206,10 @@ class Recipe extends Component{
                     <p> While many parents are understandably looking to ready meals and processed foods as a quick and low-cost way to feed the family, there are convenient, affordable and healthy alternatives. 
                          Here are five ways to help feed your children a varied, nutritious diet that will support their growth and development, all while building healthy eating habits. 
                     </p>  
-                    <p class="left"> <font color="purple">  5 healthy eating tips </font></p> 
-                    <p>
+                    <p class="left"> <font color="purple">  Five healthy eating tips </font></p> 
+                    <div>
                       <div class="auth-inner"> 
+<<<<<<< HEAD
                             <p> <font size="4" color="purple"> 1. Keep up fruit and vegetable intake </font> </p>
                             Purchasing, storing and cooking fresh vegetables can be challenging in a lockdown, especially when parents are advised to limit trips outside of the home.
                             But wherever possible, it’s important to ensure children are still getting plenty of fruit and vegetables in their diet. 
@@ -217,27 +218,33 @@ class Recipe extends Component{
                               Using fresh vegetables to cook large batches of soups, stews or other dishes will make them last longer and provide meal options for a few days. 
                                 These can also be frozen where possible and then quickly reheated.
                             </p>      
+=======
+                           <p> <font size="4" color="purple"> 1. Keep up fruit and vegetable intake </font></p>
+                            <p>Purchasing, storing and cooking fresh vegetables can be challenging in a lockdown, especially when parents are advised to limit trips outside of the home.
+                            But wherever possible, it’s important to ensure children are still getting plenty of fruit and vegetables in their diet. 
+                            Whenever it is possible to get hold of fresh produce, do so. 
+                            As well as being eaten fresh, fruits and vegetables can be frozen where possible and will retain most of their nutrients and flavor. 
+                            Using fresh vegetables to cook large batches of soups, stews or other dishes will make them last longer and provide meal options for a few days. 
+                            These can also be frozen where possible and then quickly reheated.</p>
+>>>>>>> master
                             <img className="child" src={require("./freshfood.jpg")} ></img>
                         </div>
-                    </p>
+                    </div>
                     
-                    <p>
+                    <div>
                         <div class="auth-inner"> 
                             <p> <font size="4" color="purple"> 2. Swap in healthy dried or canned alternatives when fresh produce is not available </font> </p>
                             Fresh produce is almost always the best option, but when it is not available there are plenty of healthy alternatives that are easy to store and prepare.
                     
-                          <p> Canned beans and chickpeas, which provide an abundance of nutrients, can be stored for months or even years, and can be included in meals in many ways.
+                              Canned beans and chickpeas, which provide an abundance of nutrients, can be stored for months or even years, and can be included in meals in many ways.
                               Canned oily fish such as sardines, mackerel and salmon are rich in protein, omega 3 fatty acids and a range of vitamins and minerals. 
                               These can be used cold in sandwiches, salads or pasta dishes, or cooked as part of a warm meal.
-                         </p>
-                         <p> 
-                                Dried goods like dried beans, pulses and grains such as lentils, split peas, rice, couscous or quinoa are also nutritious, long-lasting options that are tasty, affordable and filling. 
-                                Rolled oats cooked with milk or water can serve as an excellent breakfast option, and can be spiced up with yoghurt, chopped fruits or raisins. 
-                         </p>
+                              Dried goods like dried beans, pulses and grains such as lentils, split peas, rice, couscous or quinoa are also nutritious, long-lasting options that are tasty, affordable and filling. 
+                              Rolled oats cooked with milk or water can serve as an excellent breakfast option, and can be spiced up with yoghurt, chopped fruits or raisins. 
                         </div>
-                    </p>
+                    </div>
 
-                    <p>
+                    <div>
                         <div class="auth-inner">
                             <p> <font size="4" color="purple"> 3. Build up a stock of healthy snacks </font> </p>
                             <img className="child" src={require("./snacks.jpg")} border="0" width= "300"></img>
@@ -246,9 +253,9 @@ class Recipe extends Component{
                                 These foods are nutritious, more filling, and help build healthy eating habits that last a lifetime.
                             </p>
                         </div>
-                    </p>
+                    </div>
 
-                    <p>
+                    <div>
                         <div class="auth-inner">
                             <p>  <font size="4" color="purple">  4. Limit highly processed foods </font> </p>
                             
@@ -260,9 +267,9 @@ class Recipe extends Component{
                                 Adding fruits or vegetables like lemon, lime, cucumber slices or berries to water is a great way to add an extra twist of flavor.
                             </p>
                         </div>
-                    </p>
+                    </div>
 
-                    <p>
+                    <div>
                         <div class="auth-inner">
                             <p> <font size="4" color="purple">  5. Make cooking and eating a fun and meaningful part of your family routine </font> </p>
                             <p>
@@ -273,9 +280,11 @@ class Recipe extends Component{
                                 Try as much as possible to stick to fixed mealtimes as a family. 
                                 Such structures and routine can help reduce anxiety for children in these stressful situations.
                             </p>
+
                             <img className="child" src={require("./family.png")} border="0" width= "600"></img>
+
                         </div>
-                    </p>
+                    </div>
 
                   <p class="center">  Explore more </p>
 
