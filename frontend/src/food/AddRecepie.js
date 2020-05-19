@@ -15,14 +15,6 @@ function AddRecepie({ recepie, onDeleteClick, onHandleEdit }) {
     edit ? setEdit(false) : setEdit(true);
   };
   const handleEdit = () => {
-    /* let formData = new FormData();
-    formData.append("id", recepie.id);
-    formData.append("file", recepie.img);
-    formData.append("body", body);
-    formData.append("name", name);
-    formData.append("ingredients", ingredients);
-    formData.append("preparation", preparation);
-    formData.append("prepTime", prepTime); */
     onHandleEdit({
       id: recepie.id,
       body: body,
@@ -32,18 +24,10 @@ function AddRecepie({ recepie, onDeleteClick, onHandleEdit }) {
       preparation: preparation,
       prepTime: prepTime,
     });
+
     setEdit(false);
-    //let formData = new FormData();
-    //formData.append("id", recepie.id);
-    //formData.append("file", recepie.img);
-    //formData.append("body", body);
-    //onHandleEdit(formData);
-    //setEdit(false);
   };
-  /* const onHandleImg = (e) => {
-    e.preventDefault();
-    setImg(e.target.files[0]);
-  };*/
+
   return (
     <>
       <div class="recipe">

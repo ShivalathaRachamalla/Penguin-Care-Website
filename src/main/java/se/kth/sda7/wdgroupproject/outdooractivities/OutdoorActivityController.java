@@ -16,9 +16,13 @@ public class OutdoorActivityController {
     public OutdoorActivityService OutdoorActivityService;
 
     @PostMapping("")
-    public OutdoorActivity create(@RequestParam("file") MultipartFile file, @RequestParam("body") String body) throws IOException {
+    public OutdoorActivity create(@RequestParam("file") MultipartFile file,
+                                  @RequestParam("body") String body,
+                                  @RequestParam("name") String name
+                                  ) throws IOException {
         OutdoorActivity  outdooractivity = new OutdoorActivity();
         outdooractivity.setBody(body);
+        outdooractivity.setName(name);
         outdooractivity.setImg(file.getBytes());
         return OutdoorActivityService.save(outdooractivity);
     }
@@ -33,11 +37,7 @@ public class OutdoorActivityController {
     }
 
     @PutMapping("")
-    public OutdoorActivity update(@RequestParam("file") MultipartFile file, @RequestParam("body") String body, @RequestParam("id") Long id) throws Exception {
-        OutdoorActivity  activity = new OutdoorActivity();
-        activity.setId(id);
-        activity.setBody(body);
-        activity.setImg(file.getBytes());
+    public OutdoorActivity update(@RequestBody OutdoorActivity activity) throws Exception {
         return OutdoorActivityService.update(activity);
     }
 

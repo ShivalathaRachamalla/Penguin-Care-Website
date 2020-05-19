@@ -13,15 +13,12 @@ class AddOutdoorActivityPage extends React.Component {
   }
 
   async postOutdoorActivity(outdooractivityData) {
-    console.log("outdooractivityData", outdooractivityData);
-
     try {
       const response = await OutdoorActivityApi.postOutdoorActivity(
         outdooractivityData
       );
-      console.log("response", response);
       const outdooractivity = response.data;
-      const newOutdoorActivities = this.state.OutdoorActivities.concat(
+      const newOutdoorActivities = this.state.outdooractivities.concat(
         outdooractivity
       );
 
@@ -33,12 +30,11 @@ class AddOutdoorActivityPage extends React.Component {
     }
   }
 
-  async deleteOutdoorActivity(outdooractivity) {
+  async deleteOutdoorActivity(activity) {
     try {
-      console.log(outdooractivity.id, ".....");
-      await OutdoorActivityApi.deleteOutdoorActivity(outdooractivity.id);
-      const newOutdoorActivities = this.state.OutdoorActivities.filter(
-        (r) => r.id !== outdooractivity.id
+      await OutdoorActivityApi.deleteOutdoorActivity(activity.id);
+      const newOutdoorActivities = this.state.outdooractivities.filter(
+        (r) => r.id !== activity.id
       );
       this.setState({
         outdooractivities: newOutdoorActivities,
@@ -48,11 +44,10 @@ class AddOutdoorActivityPage extends React.Component {
     }
   }
 
-  async updateOutdoorActivity(outdooractivity) {
+  async updateOutdoorActivity(outdooractivityData) {
     try {
-      console.log(outdooractivity);
       const response = await OutdoorActivityApi.updateOutdoorActivity(
-        outdooractivity
+        outdooractivityData
       );
       const outdooractivity = response.data;
       const newOutdoorActivities = this.state.outdooractivities
@@ -85,11 +80,9 @@ class AddOutdoorActivityPage extends React.Component {
             <AddOutdoorActivity
               key={outdooractivity.id}
               outdooractivity={outdooractivity}
-              onDeleteClick={(outdooractivity) =>
-                this.deleteOutdoorActivity(outdooractivity)
-              }
-              onHandleEdit={(outdooractivity) =>
-                this.updateOutdoorActivity(outdooractivity)
+              onDeleteClick={() => this.deleteOutdoorActivity(outdooractivity)}
+              onHandleEdit={(outdooractivityData) =>
+                this.updateOutdoorActivity(outdooractivityData)
               }
             />
           ))}{" "}

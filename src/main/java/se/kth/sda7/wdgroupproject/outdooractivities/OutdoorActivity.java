@@ -16,22 +16,32 @@ public class OutdoorActivity {
     @Column(name = "body")
     private String body;
 
-
+    @Column(name = "name")
+    private  String name;
 
     @Lob
     @Column(name = "img")
     private byte[] img;
 
+    public OutdoorActivity(Long id, String body, String name, byte[] img) {
+        this.id = id;
+        this.body = body;
+        this.name = name;
+        this.img = img;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public OutdoorActivity() { }
 
     public OutdoorActivity(String body) {
         this.body = body;
-    }
-
-    public OutdoorActivity(Long id, String body, byte[] img) {
-        this.id = id;
-        this.body = body;
-        this.img = img;
     }
 
     public void setImg(byte[] img) {

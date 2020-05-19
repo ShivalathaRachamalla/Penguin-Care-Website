@@ -3,9 +3,6 @@ package se.kth.sda7.wdgroupproject.movies;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import se.kth.sda7.wdgroupproject.movies.Movie;
-import se.kth.sda7.wdgroupproject.movies.MovieService;
-import se.kth.sda7.wdgroupproject.recepies.Recepie;
 
 import java.io.IOException;
 import java.util.List;
@@ -17,9 +14,10 @@ public class MovieController {
     public MovieService movieService;
 
 @PostMapping("")
-    public Movie create(@RequestParam("file") MultipartFile file, @RequestParam("body") String body) throws IOException {
+    public Movie create(@RequestParam("file") MultipartFile file, @RequestParam("body") String body, @RequestParam("name") String name) throws IOException {
         Movie movie = new Movie();
         movie.setBody(body);
+        movie.setName(name);
         movie.setImg(file.getBytes());
         return movieService.save(movie);
     }
@@ -34,11 +32,7 @@ public class MovieController {
     }
 
     @PutMapping("")
-    public Movie update(@RequestParam("file") MultipartFile file, @RequestParam("body") String body, @RequestParam("id") Long id) throws Exception {
-        Movie  movie = new Movie();
-        movie.setId(id);
-        movie.setBody(body);
-        movie.setImg(file.getBytes());
+    public Movie update(@RequestBody Movie movie) throws Exception {
         return movieService.update(movie);
     }
 
