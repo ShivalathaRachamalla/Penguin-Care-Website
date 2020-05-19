@@ -16,10 +16,14 @@ class AddOutdoorActivityPage extends React.Component {
     console.log("outdooractivityData", outdooractivityData);
 
     try {
-      const response = await OutdoorActivityApi.postOutdoorActivity(outdooractivityData);
+      const response = await OutdoorActivityApi.postOutdoorActivity(
+        outdooractivityData
+      );
       console.log("response", response);
       const outdooractivity = response.data;
-      const newOutdoorActivities = this.state.OutdoorActivities.concat(outdooractivity);
+      const newOutdoorActivities = this.state.outdooractivities.concat(
+        outdooractivity
+      );
 
       this.setState({
         outdooractivities: newOutdoorActivities,
@@ -31,29 +35,34 @@ class AddOutdoorActivityPage extends React.Component {
 
   async deleteOutdoorActivity(outdooractivity) {
     try {
-        await OutdoorActivityApi.deleteOutdoorActivity(outdooractivity.id);
-        const newOutdoorActivities = this.state.OutdoorActivities.filter(r => r.id !== outdooractivity.id);
-        this.setState({
-            outdooractivities: newOutdoorActivities,
-        });
-    } catch (e) {
-        console.error(e);
-    }
-}
-
-async updateOutdoorActivity(outdooractivity) {
-  try {
-      console.log(outdooractivity);
-      const response = await OutdoorActivityApi.updateOutdoorActivity(outdooractivity);
-      const outdooractivity = response.data;
-      const newOutdoorActivities = this.state.outdooractivities.filter(r => r.id !== outdooractivity.id).concat(outdooractivity);;
+      await OutdoorActivityApi.deleteOutdoorActivity(outdooractivity.id);
+      const newOutdoorActivities = this.state.outdooractivities.filter(
+        (r) => r.id !== outdooractivity.id
+      );
       this.setState({
         outdooractivities: newOutdoorActivities,
       });
-  } catch (e) {
+    } catch (e) {
       console.error(e);
+    }
   }
-}
+
+  async updateOutdoorActivity(outdooractivityData) {
+    try {
+      const response = await OutdoorActivityApi.updateOutdoorActivity(
+        outdooractivityData
+      );
+      const outdooractivity = response.data;
+      const newOutdoorActivities = this.state.outdooractivities
+        .filter((r) => r.id !== outdooractivity.id)
+        .concat(outdooractivity);
+      this.setState({
+        outdooractivities: newOutdoorActivities,
+      });
+    } catch (e) {
+      console.error(e);
+    }
+  }
 
   componentDidMount() {
     OutdoorActivityApi.getAllOutdoorActivities()
@@ -66,11 +75,19 @@ async updateOutdoorActivity(outdooractivity) {
 
     return (
       <div className="card">
-        <AddOutdoorActivityForm onSubmit={(formData) => this.postOutdoorActivity(formData)} />
+        <AddOutdoorActivityForm
+          onSubmit={(formData) => this.postOutdoorActivity(formData)}
+        />
         <div className="recipe">
           {outdooractivities.map((outdooractivity) => (
-            <AddOutdoorActivity key={outdooractivity.id} outdooractivity={outdooractivity} onDeleteClick={(outdooractivity) => this.deleteOutdoorActivity(outdooractivity)}
-            onHandleEdit={(outdooractivity) => this.updateOutdoorActivity(outdooractivity)}/>
+            <AddOutdoorActivity
+              key={outdooractivity.id}
+              outdooractivity={outdooractivity}
+              onDeleteClick={() => this.deleteOutdoorActivity(outdooractivity)}
+              onHandleEdit={(outdooractivityData) =>
+                this.updateOutdoorActivity(outdooractivityData)
+              }
+            />
           ))}{" "}
         </div>
       </div>
