@@ -3,7 +3,6 @@ package se.kth.sda7.wdgroupproject.recepies;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import se.kth.sda7.wdgroupproject.posts.Post;
 
 import java.io.IOException;
 import java.util.List;
@@ -17,9 +16,19 @@ public class RecepieController {
     public RecepieService recepieService;
 
     @PostMapping("")
-    public Recepie create(@RequestParam("file") MultipartFile file, @RequestParam("body") String body) throws IOException {
+    public Recepie create(@RequestParam("file") MultipartFile file,
+                          @RequestParam("body") String body,
+                          @RequestParam("name") String name,
+                          @RequestParam("ingredients") String ingredients,
+                          @RequestParam("preparation") String preparation,
+                          @RequestParam("prepTime") String prepTime
+    ) throws IOException {
         Recepie  recepie = new Recepie();
         recepie.setBody(body);
+        recepie.setName(name);
+        recepie.setIngredients(ingredients);
+        recepie.setPrepTime(prepTime);
+        recepie.setPreparation(preparation);
         recepie.setImg(file.getBytes());
         return recepieService.save(recepie);
     }
