@@ -21,7 +21,6 @@ public class OutdoorActivityService {
     }
 
     public void deleteById(Long id) {
-<<<<<<< HEAD
         repository.deleteById(id);
     }
 
@@ -29,16 +28,5 @@ public class OutdoorActivityService {
         return repository.findById(activity.getId()).map(r -> {
             return repository.save(activity);
         }).orElseThrow(() -> new Exception("Movie not found"));
-=======
-
-    }
-
-    public OutdoorActivity update(OutdoorActivity outdoorActivity) throws Exception {
-        return repository.findById(outdoorActivity.getId()).map(r -> {
-            return repository.save(outdoorActivity);
-        }).orElseThrow(() -> new Exception("Activity not found"));
-
->>>>>>> master
     }
 }
-
