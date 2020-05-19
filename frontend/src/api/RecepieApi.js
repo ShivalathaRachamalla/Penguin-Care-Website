@@ -19,7 +19,6 @@ class RecepieApi {
 
   updateRecepie(recepie) {
     return Api.put("/recepies", recepie);
-    
   }
 }
 

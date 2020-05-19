@@ -21,7 +21,11 @@ class AddOutdoorActivityPage extends React.Component {
       );
       console.log("response", response);
       const outdooractivity = response.data;
+<<<<<<< HEAD
       const newOutdoorActivities = this.state.outdooractivities.concat(
+=======
+      const newOutdoorActivities = this.state.OutdoorActivities.concat(
+>>>>>>> master
         outdooractivity
       );
 
@@ -35,8 +39,14 @@ class AddOutdoorActivityPage extends React.Component {
 
   async deleteOutdoorActivity(outdooractivity) {
     try {
+<<<<<<< HEAD
       await OutdoorActivityApi.deleteOutdoorActivity(outdooractivity.id);
       const newOutdoorActivities = this.state.outdooractivities.filter(
+=======
+      console.log(outdooractivity.id, ".....");
+      await OutdoorActivityApi.deleteOutdoorActivity(outdooractivity.id);
+      const newOutdoorActivities = this.state.OutdoorActivities.filter(
+>>>>>>> master
         (r) => r.id !== outdooractivity.id
       );
       this.setState({
@@ -47,10 +57,18 @@ class AddOutdoorActivityPage extends React.Component {
     }
   }
 
+<<<<<<< HEAD
   async updateOutdoorActivity(outdooractivityData) {
     try {
       const response = await OutdoorActivityApi.updateOutdoorActivity(
         outdooractivityData
+=======
+  async updateOutdoorActivity(outdooractivity) {
+    try {
+      console.log(outdooractivity);
+      const response = await OutdoorActivityApi.updateOutdoorActivity(
+        outdooractivity
+>>>>>>> master
       );
       const outdooractivity = response.data;
       const newOutdoorActivities = this.state.outdooractivities
@@ -83,9 +101,17 @@ class AddOutdoorActivityPage extends React.Component {
             <AddOutdoorActivity
               key={outdooractivity.id}
               outdooractivity={outdooractivity}
+<<<<<<< HEAD
               onDeleteClick={() => this.deleteOutdoorActivity(outdooractivity)}
               onHandleEdit={(outdooractivityData) =>
                 this.updateOutdoorActivity(outdooractivityData)
+=======
+              onDeleteClick={(outdooractivity) =>
+                this.deleteOutdoorActivity(outdooractivity)
+              }
+              onHandleEdit={(outdooractivity) =>
+                this.updateOutdoorActivity(outdooractivity)
+>>>>>>> master
               }
             />
           ))}{" "}
