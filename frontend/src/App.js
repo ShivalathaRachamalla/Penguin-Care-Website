@@ -120,7 +120,7 @@ function App() {
               <Route path="/AboutUs" component={AboutUs} />
             </Switch>
           </div>
-        </div>
+      </div>
       </div>
     </Router>
   );

@@ -6,7 +6,7 @@ function LoginForm({onSubmit}) {
 
     {
             return (
-                <form>
+                <form className="auth-wrapper-feature">
                     <h3>Sign In</h3>
 
                     <div className="form-group">
