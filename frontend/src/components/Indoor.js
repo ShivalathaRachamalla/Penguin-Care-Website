@@ -12,6 +12,7 @@ class Indoor extends Component {
                    <img src={require('../img/activityani.gif')} alt="activity d
                     image"  class="activity_img"/>
                    <p>
+                    <br></br>    
                    Whether your company has required that you work from home for a few weeks or your children's schools are closed, the 
                    coronavirus outbreak means a lot more of time spent indoors. Of course, your kids' health and safety is paramount, but 
                    keeping your little ones entertained for hours on end is probably vital for your sanity. In an effort to make the next few 
@@ -21,9 +22,8 @@ class Indoor extends Component {
                    
                     </div>
                   
-                     <ol type="1">
                             <div className="trial">
-                        <font size="5" color="brown"> <li><b>Make homemade Playdough</b></li></font>
+                        <font size="5" color="brown">1. Make homemade Playdough</font>
                             
                             <p>Any time we make homemade playdough, it’s a hit! 
                                 You don’t even need anything fancy like playdough tools. </p>
@@ -36,11 +36,11 @@ class Indoor extends Component {
                                 
                                 </ul>
                                 <p className="para">Be careful not to overcook it, or the dough will be crumbly. You can use playdough tools, or simply let them play with the dough as is.</p>
-                                <img src={require('../img/playdough.jpg')} alt="activity d
-                             image" width="500" height="350" align="center" />
-                                </div>
+                              <img src={require('../img/playdough.jpg')} alt="activity d
+                             image" width="500" height="350" align="center" /></div>
+                        
                                 <div className="trial">
-                                <font size="5" color="brown">  <li><b>Make Fort</b></li></font> 
+                                <font size="5" color="brown">2. Make Fort</font> 
                                
                                <p>Building indoor forts is a timeless pastime that is still a popular activity for kids today. Here’s a list of the basic supplies you need to get started as well as our top tips for how to 
                                create an extra special fort with your little one.</p>
@@ -55,7 +55,7 @@ class Indoor extends Component {
                                 image" width="600" height="350" align="center" />
                               </div>
                               <div className="trial">
-                              <font size="5" color="brown"> <li> <b>Jumping frog origami activity</b></li></font>
+                              <font size="5" color="brown">3. Jumping frog origami activity</font>
                                <p> This is a great activity for school aged kids: 
                                  <a href="https://www.youtube.com/watch?v=oi7oitREUBQ"> Origami jumping frogs </a>from It’s Always Autumn. Click through for step by step folding instructions, then let kids make as many frogs as they like. They actually jump, 
                                    so they’re pretty fun to play with once you’ve folded a bunch.</p>
@@ -63,7 +63,7 @@ class Indoor extends Component {
                              image" width="500" height="250" align="center" />
                                   </div>
                                   <div className="trial">
-                                  <font size="5" color="brown"> <li> <b>Rock Painting Activity</b></li></font>
+                                  <font size="5" color="brown">4. Rock Painting Activity</font>
                                 <p>With all the beautiful rock art floating around, we wanted to make sure that the littlest crafters don’t get left out.  Some of the story rocks and intricate paintings are too much for kids to craft.  
                                  So we decided to search for some fun crafts that 
                                  are perfect the smallest rock hunters.  Grab some paints, a handful of rocks, and your little ones and let’s start stone painting!</p>
@@ -71,7 +71,7 @@ class Indoor extends Component {
                                 image" width="600" height="350" align="center" />
                                  </div>
                                  <div className="trial">
-                                 <font size="5" color="brown"> <li> <b>Fingerprint Art</b></li></font>
+                                 <font size="5" color="brown"> 5. Fingerprint Art</font>
                              <p>My little kids have a new favorite activity: fingerprint art. They have spent hours in the past few weeks making finger and thumb prints and 
                                  then adding details with a black Sharpie to turn the prints into all sorts of animals, monsters, bugs, etc. It’s a fantastic boredom buster: it keeps them busy and quiet without
                                   the aid of electronics or any help from me.
@@ -80,7 +80,7 @@ class Indoor extends Component {
                              image" width="600" height="350" align="center" />
                              </div>
                              <div className="trial">
-                            <font size="5" color="brown"> <li> <b>Create a Race-Car Track</b></li></font>
+                            <font size="5" color="brown">6. Create a Race-Car Track</font>
                              <p>Use your painter’s tape (or opt for this super cool race-track tape) to make a huge road system for your kids’
                                   matchbox cars. Think outside the box and have the track scale furniture and other obstacles (just make sure it’s something 
                                   you don’t mind toy vehicles being “driven” over). The key to making it active is to make it large-scale, so they are engaging their core muscles while crawling all over.</p>
@@ -88,14 +88,14 @@ class Indoor extends Component {
                              image" width="550" height="350" align="center" />
                              </div>
                              <div className="trial">
-                             <font size="5" color="brown"> <li> <b> Paint with a Balloon</b></li></font>
+                             <font size="5" color="brown">7. Paint with a Balloon </font>
                              <p>Make cricket-ball sized water balloons and use them as tools to paint on blank paper. Young kids can simply make stamps in different colours. Older kids could use 
                                  these to paint simple structured images.</p>
                                  <img src={require('../img/balloonart.jpg')} alt="activity d
                              image" width="400" height="250" align="center" />
                              </div>
                              <div className="trial">
-                             <font size="5" color="brown"> <li> <b> Paper Plate Sun Craft</b></li></font>
+                             <font size="5" color="brown">8. Paper Plate Sun Craft</font>
                              <p>
                              Here comes the sun! This fun and simple paper plate craft will definitely work on those 
                              fine motor skills, as little ones carefully glue each of the sun’s “rays” on (AKA yellow pipe cleaners). You can 
@@ -113,7 +113,7 @@ class Indoor extends Component {
                              image" width="500" height="300" align="center" />
                              </div>
                              <div className="trial">
-                            <font size="5" color="brown"> <li> <b>Caterpillar Suncatcher Craft</b></li></font>
+                            <font size="5" color="brown">9. Caterpillar Suncatcher Craft </font>
                             <p>This caterpillar suncatcher offers toddlers a fun indoor activity. Using the colorful tops of extra Play-Doh lids, you can help guide 
                              your little one as he sticks them to the window, forming a happy little caterpillar. Then show him where to glue on the 
                              tiny caterpillar legs, ears and eyes to complete the friendly face. </p>
@@ -130,7 +130,7 @@ class Indoor extends Component {
                              image" width="500" height="300" align="center" />
                              </div>
                              <div className="trial">
-                              <font size="5" color="brown"> <li> <b>Puzzles</b></li></font>
+                              <font size="5" color="brown">9. Puzzle</font> 
                               <p>Exercise those creative, cognitive and problem-solving muscles with a good puzzle. You can use a 
                                   store-bought variety or have the kids make their own. Have your children draw a picture on a sturdy 
                                   piece of cardboard or Bristol board. Then use a pencil to outline puzzle pieces directly on their drawing. 
@@ -138,8 +138,7 @@ class Indoor extends Component {
                                   <img src={require('../img/puzzle.gif')} alt="activity d
                              image" width="500" height="300" align="center" />
                              </div>
-                            </ol>
-                            <br/>
+                            
                             <div className="trial">
                             <img src={require('../img/indactivity.png')} alt="activity d
                              image" width="400" height="500" align="center" /><br/></div>
