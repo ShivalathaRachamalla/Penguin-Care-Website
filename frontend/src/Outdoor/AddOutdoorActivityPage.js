@@ -13,13 +13,10 @@ class AddOutdoorActivityPage extends React.Component {
   }
 
   async postOutdoorActivity(outdooractivityData) {
-    console.log("outdooractivityData", outdooractivityData);
-
     try {
       const response = await OutdoorActivityApi.postOutdoorActivity(
         outdooractivityData
       );
-      console.log("response", response);
       const outdooractivity = response.data;
       const newOutdoorActivities = this.state.outdooractivities.concat(
         outdooractivity
@@ -33,11 +30,11 @@ class AddOutdoorActivityPage extends React.Component {
     }
   }
 
-  async deleteOutdoorActivity(outdooractivity) {
+  async deleteOutdoorActivity(activity) {
     try {
-      await OutdoorActivityApi.deleteOutdoorActivity(outdooractivity.id);
+      await OutdoorActivityApi.deleteOutdoorActivity(activity.id);
       const newOutdoorActivities = this.state.outdooractivities.filter(
-        (r) => r.id !== outdooractivity.id
+        (r) => r.id !== activity.id
       );
       this.setState({
         outdooractivities: newOutdoorActivities,
