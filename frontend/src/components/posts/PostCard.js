@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 
-<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import "../../App.css";
 
-=======
->>>>>>> master
 import CommentList from "../comments/CommentList";
 
 function PostCard({ userMail, post, onDeleteClick, onHandleEdit }) {
