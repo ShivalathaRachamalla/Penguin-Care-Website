@@ -18,9 +18,7 @@ class MovieApi {
   }
 
   updateMovie(movie) {
-    return Api.put("/movies", movie, {
-      headers: { "Content-Type": "multipart/form-data" },
-    });
+    return Api.put("/movies", movie);
   }
 }
 

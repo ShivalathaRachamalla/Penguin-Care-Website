@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 
+<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import "../../App.css";
 
+=======
+>>>>>>> master
 import CommentList from "../comments/CommentList";
 
 function PostCard({ userMail, post, onDeleteClick, onHandleEdit }) {
   const [show, setShow] = useState(false);
   const [edit, setEdit] = useState(false);
   const [body, setBody] = useState(post);
-  const [img, setImg] = useState(null);
   const showComments = () => {
     show ? setShow(false) : setShow(true);
   };
@@ -20,10 +22,6 @@ function PostCard({ userMail, post, onDeleteClick, onHandleEdit }) {
   const handleEdit = () => {
     onHandleEdit({ id: post.id, body: body, email: post.email, img: post.img });
     setEdit(false);
-  };
-  const onHandleImg = (e) => {
-    e.preventDefault();
-    setImg(e.target.files[0]);
   };
 
   return (

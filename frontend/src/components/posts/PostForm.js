@@ -1,19 +1,17 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 
-function PostForm({ onSubmit,email }) {
+function PostForm({ onSubmit, email }) {
   const [body, setBody] = useState("");
   const [img, setImg] = useState(null);
-  
 
   const handleSubmit = () => {
     let formData = new FormData();
     formData.append("file", img);
     formData.append("body", body);
-    formData.append("email", email)
-    // Invoke the passed in event callback
+    formData.append("email", email);
+
     onSubmit(formData);
 
-    // Clear the input field
     setBody("");
     setImg(null);
   };

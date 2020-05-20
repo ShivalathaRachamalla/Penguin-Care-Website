@@ -46,7 +46,8 @@ function AddRecepieForm({ onSubmit }) {
           <div className="form-group">
             {" "}
             <h6>Name of the Recipe:</h6>
-            <textarea
+            <input
+              type="text"
               className="form-control"
               value={name}
               onChange={(e) => {

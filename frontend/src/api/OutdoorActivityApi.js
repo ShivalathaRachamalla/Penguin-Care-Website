@@ -12,14 +12,12 @@ class OutdoorActivityApi {
   }
 
   deleteOutdoorActivity(id) {
-    return Api.delete('/outdooractivities/'+id);
+    return Api.delete("/outdooractivities/" + id);
   }
 
   updateOutdoorActivity(outdooractivity) {
-    return Api.put("/outdooractivities", outdooractivity, {
-      headers: { "Content-Type": "multipart/form-data" },
-    });
-}
+    return Api.put("/outdooractivities", outdooractivity);
+  }
 }
 
 export default new OutdoorActivityApi();

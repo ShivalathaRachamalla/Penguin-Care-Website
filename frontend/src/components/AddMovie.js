@@ -4,46 +4,59 @@ import { Link } from "react-router-dom";
 
 function AddMovie({ movie, onDeleteClick, onHandleEdit }) {
   const [edit, setEdit] = useState(false);
-  const [body, setBody] = useState(movie);
-  const [img, setImg] = useState(null);
+  const [body, setBody] = useState(movie.body);
+  const [name, setName] = useState(movie.name);
   const onUpdateClick = () => {
     edit ? setEdit(false) : setEdit(true);
   };
   const handleEdit = () => {
-    let movieData = new FormData();
-    movieData.append("id", movie.id);
-    movieData.append("file", movie.img);
-    movieData.append("body", body);
-    onHandleEdit(movieData);
+    onHandleEdit({ id: movie.id, name: name, body: body, img: movie.img });
     setEdit(false);
-    setImg(null);
   };
-  const onHandleImg = (e) => {
-    e.preventDefault();
-    setImg(e.target.files[0]);
-  };
+
   return (
     <div className="movie">
       <div class="image-txt-container">
-        {!edit ? (
-          <>
-            {" "}
-            <img
-              src={"data:image/png;base64, " + movie.img}
-              border="0"
-              width="200"
-            ></img>
-            <h5>{movie.body}</h5>{" "}
-          </>
-        ) : (
-          <>
-            <input type="file" onChange={onHandleImg} />
-            <textarea onChange={(e) => setBody(e.target.value)}>
-              {movie.body}
-            </textarea>
-          </>
-        )}
+        <div className="trial">
+          {!edit ? (
+            <>
+              <font size="5" color="brown">
+                {" "}
+                <li>
+                  <b> {movie.name} </b>
+                </li>
+              </font>
+              <p>{movie.body}</p>
+            </>
+          ) : (
+            <>
+              <font size="5" color="brown">
+                {" "}
+                <li>
+                  <b>
+                    <textarea onChange={(e) => setName(e.target.value)}>
+                      {movie.name}
+                    </textarea>
+                  </b>
+                </li>
+              </font>
 
+              <p>
+                <textarea onChange={(e) => setBody(e.target.value)}>
+                  {movie.body}
+                </textarea>
+              </p>
+            </>
+          )}
+
+          <img
+            src={"data:image/png;base64, " + movie.img}
+            alt="activity d image"
+            width="600"
+            height="350"
+            align="center"
+          />
+        </div>
         <button
           className="btn btn-danger btn-sm mb-4 float-right"
           onClick={onDeleteClick}
