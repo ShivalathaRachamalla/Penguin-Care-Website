@@ -32,7 +32,7 @@ function AddOutdoorActivityForm({ onSubmit }) {
         </h3>
         <div>
           <div className="form-group">
-            Movie Name:
+            Activity Name:
             <input
               type="text"
               className="form-control"
