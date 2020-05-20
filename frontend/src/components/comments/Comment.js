@@ -14,40 +14,42 @@ function Comment({ comment, onDeleteClick, activeMail, onHandleEdit }) {
   };
 
   return (
-    <div>
-      <p>{"User Name :" + comment.email}</p>
+    <div className="list-group list-group-flush">
+      <div className="list-group-item">
+        <p>{"User Name :" + comment.email}</p>
 
-      {!edit ? (
-        <h5>{comment.body}</h5>
-      ) : (
-        <textarea onChange={(e) => setBody(e.target.value)}>
-          {comment.body}
-        </textarea>
-      )}
-
-      {comment.email == activeMail ? (
-        !edit ? (
-          <button
-            className="btn btn-primary btn-sm mb-4 float-right mr-1"
-            onClick={onUpdateClick}
-          >
-            Edit
-          </button>
+        {!edit ? (
+          <h5>{comment.body}</h5>
         ) : (
-          <button
-            className="btn btn-primary btn-sm mb-4 float-right mr-1"
-            onClick={handleEdit}
-          >
-            Save
-          </button>
-        )
-      ) : null}
+          <textarea onChange={(e) => setBody(e.target.value)}>
+            {comment.body}
+          </textarea>
+        )}
 
-      {comment.email == activeMail ? (
-        <button className="btn btn-danger btn-sm" onClick={onDeleteClick}>
-          Delete comment
-        </button>
-      ) : null}
+        {comment.email == activeMail ? (
+          !edit ? (
+            <button
+              className="btn btn-primary btn-sm mb-4 float-right mr-1"
+              onClick={onUpdateClick}
+            >
+              Edit
+            </button>
+          ) : (
+            <button
+              className="btn btn-primary btn-sm mb-4 float-right mr-1"
+              onClick={handleEdit}
+            >
+              Save
+            </button>
+          )
+        ) : null}
+
+        {comment.email == activeMail ? (
+          <button className="btn btn-danger btn-sm" onClick={onDeleteClick}>
+            Delete comment
+          </button>
+        ) : null}
+      </div>
     </div>
   );
 }

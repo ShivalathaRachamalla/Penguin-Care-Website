@@ -12,7 +12,7 @@ function AddOutdoorActivity({ outdooractivity, onDeleteClick, onHandleEdit }) {
   const handleEdit = () => {
     let formData = new FormData();
     formData.append("id", outdooractivity.id);
-    formData.append("file", img);
+    formData.append("file", outdooractivity.img);
     formData.append("body", body);
     onHandleEdit(formData);
     setEdit(false);
